@@ -1,0 +1,8 @@
+data:
+  raw_path: data/raw/INDIA_AQI_COMPLETE_20251126.csv
+
+logging:
+  log_file: outputs/logs/app.log
+
+analysis:
+  default_stage: profiling
