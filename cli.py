@@ -1,3 +1,14 @@
+"""
+Command-line entry for India AQI EDA and prediction.
+
+- Default mode: ``python cli.py [--stage NAME]`` runs ``run_eda`` (full-file load,
+  validate, clean, features, then gated analysis for ``profiling`` … ``full``).
+- ``python cli.py --predict``: chunked city load, same preprocessing, then
+  ``run_forecast`` (see ``src/prediction/pipeline.py``).
+
+Uses ``argparse`` (not Click). User-facing overview: README.md at repo root.
+"""
+
 import argparse
 import logging
 import sys

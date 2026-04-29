@@ -206,6 +206,16 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
-# This project: generated outputs and large local datasets (do not push to GitHub)
-outputs/
-data/raw/*.csv
+# This project: data/raw CSVs and outputs/ are tracked for instructor review.
+# Large CSV tracked via Git LFS (see .gitattributes).
+# If app.log is ignored by the global *.log rule above, force-include it:
+!outputs/
+!outputs/logs/
+!outputs/logs/app.log
+
+# Prediction model artifacts are large (100-200 MB each) and regeneratable.
+# Exclude them from git; keep manifests and last_run.json for reference.
+outputs/prediction/models/**/*.joblib
+
+# Optional: large local PDFs in reports (uncomment if needed)
+# reports/*.pdf

@@ -1,0 +1,17 @@
+low_wind,high_humidity,Season,severe_probability
+False,False,Monsoon,0.00031138097462245055
+False,False,Post_Monsoon,0.0004063058670567203
+False,False,Summer,0.002076938817270309
+False,False,Winter,0.0004125882085135443
+False,True,Monsoon,1.9411947406563826e-05
+False,True,Post_Monsoon,0.0006391137622496804
+False,True,Summer,0.00024121220095169176
+False,True,Winter,0.003554091539528433
+True,False,Monsoon,0.0001122586439155815
+True,False,Post_Monsoon,0.000407518720391218
+True,False,Summer,0.00040914670182297586
+True,False,Winter,0.0003740834954361814
+True,True,Monsoon,0.0
+True,True,Post_Monsoon,0.0005255990634780324
+True,True,Summer,0.0002616235610704141
+True,True,Winter,0.0047175374454534735

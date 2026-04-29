@@ -1,51 +1,57 @@
 import logging
+import os
+
 import pandas as pd
+
+from src.utils.helpers import outputs_path
 
 logger = logging.getLogger(__name__)
 
-# Wind X Season interaction
-def wind_season_interaction(df: pd.DataFrame):
 
+def wind_season_interaction(df: pd.DataFrame) -> pd.DataFrame:
+    """Mean PM2.5 by Season × low_wind combination."""
     logger.info("Analyzing Wind × Season interaction")
 
     result = df.groupby(["Season", "low_wind"])["PM2_5_ugm3"].mean().reset_index()
 
     return result
 
-# Humidity X Season interaction
-def humidity_season_interaction(df: pd.DataFrame):
 
+def humidity_season_interaction(df: pd.DataFrame) -> pd.DataFrame:
+    """Mean PM2.5 by Season × high_humidity combination."""
     logger.info("Analyzing Humidity × Season interaction")
 
     result = df.groupby(["Season", "high_humidity"])["PM2_5_ugm3"].mean().reset_index()
 
     return result
 
-# Wind X Humidity interaction
-def wind_humidity_interaction(df: pd.DataFrame):
 
+def wind_humidity_interaction(df: pd.DataFrame) -> pd.DataFrame:
+    """Mean PM2.5 by low_wind × high_humidity combination."""
     logger.info("Analyzing Wind × Humidity interaction")
 
-    result = df.groupby(
-        ["low_wind", "high_humidity"]
-    )["PM2_5_ugm3"].mean().reset_index()
+    result = (
+        df.groupby(["low_wind", "high_humidity"])["PM2_5_ugm3"].mean().reset_index()
+    )
 
     return result
 
-# Event X Season interaction
-def event_season_interaction(df: pd.DataFrame):
 
+def event_season_interaction(df: pd.DataFrame) -> pd.DataFrame:
+    """Mean PM2.5 by Season × festival × crop-burning combination."""
     logger.info("Analyzing Event × Season interaction")
 
-    result = df.groupby(
-        ["Season", "is_festival", "is_crop_burning"]
-    )["PM2_5_ugm3"].mean().reset_index()
+    result = (
+        df.groupby(["Season", "is_festival", "is_crop_burning"])["PM2_5_ugm3"]
+        .mean()
+        .reset_index()
+    )
 
     return result
 
-# Severe probability
-def severe_probability(df: pd.DataFrame):
 
+def severe_probability(df: pd.DataFrame) -> pd.DataFrame:
+    """Conditional probability of severe pollution by weather/season group."""
     logger.info("Computing conditional probability of severe pollution")
 
     grouped = df.groupby(["low_wind", "high_humidity", "Season"])
@@ -56,9 +62,9 @@ def severe_probability(df: pd.DataFrame):
 
     return prob
 
-# Interaction strength
-def interaction_strength(df: pd.DataFrame):
 
+def interaction_strength(df: pd.DataFrame) -> pd.DataFrame:
+    """Variance reduction when grouping by low_wind × high_humidity."""
     logger.info("Evaluating interaction strength")
 
     overall_var = df["PM2_5_ugm3"].var()
@@ -68,29 +74,26 @@ def interaction_strength(df: pd.DataFrame):
     result = {
         "overall_variance": overall_var,
         "grouped_variance": grouped_var,
-        "variance_reduction": overall_var - grouped_var
+        "variance_reduction": overall_var - grouped_var,
     }
 
     return pd.DataFrame([result])
 
-# City-level interaction
-def city_interaction(df: pd.DataFrame):
 
+def city_interaction(df: pd.DataFrame) -> pd.DataFrame:
+    """Mean PM2.5 by City × low_wind."""
     logger.info("Analyzing city-level interaction effects")
 
-    result = df.groupby(
-        ["City", "low_wind"]
-    )["PM2_5_ugm3"].mean().reset_index()
+    result = df.groupby(["City", "low_wind"])["PM2_5_ugm3"].mean().reset_index()
 
     return result
 
 
-
-def interaction_analysis(df: pd.DataFrame):
-
+def interaction_analysis(df: pd.DataFrame) -> dict[str, pd.DataFrame]:
+    """Run all interaction sub-analyses and persist CSVs."""
     logger.info("Starting interaction analysis")
 
-    outputs = {}
+    outputs: dict[str, pd.DataFrame] = {}
 
     outputs["wind_season"] = wind_season_interaction(df)
     outputs["humidity_season"] = humidity_season_interaction(df)
@@ -100,11 +103,12 @@ def interaction_analysis(df: pd.DataFrame):
     outputs["strength"] = interaction_strength(df)
     outputs["city_interaction"] = city_interaction(df)
 
-    # Save outputs
+    tables_dir = outputs_path("tables")
+    os.makedirs(tables_dir, exist_ok=True)
     for name, table in outputs.items():
-        path = f"outputs/tables/{name}_interaction.csv"
+        path = os.path.join(tables_dir, f"{name}_interaction.csv")
         table.to_csv(path, index=False)
-        logger.info(f"Saved: {path}")
+        logger.info("Saved: %s", path)
 
     logger.info("Interaction analysis completed")
 

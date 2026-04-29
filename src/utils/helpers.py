@@ -23,3 +23,8 @@ def normalize_eda_stage(stage: str) -> str:
 def project_root() -> str:
     """Absolute path to the repository root (directory that contains ``config`` and ``src``)."""
     return os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+
+
+def outputs_path(*parts: str) -> str:
+    """Absolute path under the repository ``outputs/`` directory."""
+    return os.path.join(project_root(), "outputs", *parts)

@@ -1,0 +1,1480 @@
+2026-04-22 03:37:40,759 | INFO | src.utils.logger | Logger initialized
+INFO | Logger initialized
+INFO | Starting CLI with stage: profiling
+INFO | Loading data from data/raw/INDIA_AQI_COMPLETE_20251126.csv
+INFO | Data loaded successfully | Shape: (842160, 71)
+INFO | Datetime parsing successful
+INFO | Profiling stage initialized (not implemented yet)
+INFO | Execution completed
+INFO | Logger initialized
+INFO | Starting CLI with stage: profiling
+INFO | Starting EDA pipeline
+INFO | Loading data from data/raw/INDIA_AQI_COMPLETE_20251126.csv
+INFO | Data loaded successfully | Shape: (842160, 71)
+INFO | Datetime parsing successful
+INFO | Validating schema
+INFO | Schema validation passed
+INFO | Validating data ranges
+INFO | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+INFO | Checking duplicate records
+INFO | Duplicate rows: 0
+INFO | Starting data cleaning
+INFO | Removed duplicates: 0
+INFO | Final dataset shape: (842160, 71)
+INFO | Rows removed: 0
+INFO | Preprocessing completed
+INFO | Profiling stage initialized (not implemented yet)
+INFO | Execution completed
+INFO | Logger initialized
+INFO | Starting CLI with stage: profiling
+INFO | Starting EDA pipeline
+INFO | Loading data from data/raw/INDIA_AQI_COMPLETE_20251126.csv
+INFO | Data loaded successfully | Shape: (842160, 71)
+INFO | Datetime parsing successful
+INFO | Validating schema
+INFO | Schema validation passed
+INFO | Validating data ranges
+INFO | Negative PM2.5 values found: 0
+INFO | Invalid humidity values: 0
+INFO | Negative wind speed values found: 0
+INFO | Checking duplicate records
+INFO | Duplicate rows: 0
+INFO | Starting data cleaning
+INFO | Removed duplicates: 0
+INFO | Final dataset shape: (842160, 71)
+INFO | Rows removed: 0
+INFO | Preprocessing completed
+INFO | Profiling stage initialized (not implemented yet)
+INFO | Execution completed
+INFO | Logger initialized
+INFO | Starting CLI with stage: profiling
+INFO | Starting EDA pipeline
+INFO | Loading data from data/raw/INDIA_AQI_COMPLETE_20251126.csv
+INFO | Data loaded successfully | Shape: (842160, 71)
+INFO | Datetime parsing successful
+INFO | Validating schema
+INFO | Schema validation passed
+INFO | Validating data ranges
+INFO | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+INFO | Checking duplicate records
+INFO | Duplicate rows: 0
+INFO | Starting data cleaning
+INFO | Removed duplicates: 0
+INFO | Final dataset shape: (842160, 71)
+INFO | Rows removed: 0
+INFO | Preprocessing completed
+INFO | Profiling stage initialized (not implemented yet)
+INFO | Execution completed
+INFO | Logger initialized
+INFO | Starting CLI with stage: profiling
+INFO | Starting EDA pipeline
+INFO | Loading data from data/raw/INDIA_AQI_COMPLETE_20251126.csv
+INFO | Data loaded successfully | Shape: (842160, 71)
+INFO | Datetime parsing successful
+INFO | Validating schema
+INFO | Schema validation passed
+INFO | Validating data ranges
+INFO | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+INFO | Checking duplicate records
+INFO | Duplicate rows: 0
+INFO | Starting data cleaning
+INFO | Removed duplicates: 0
+INFO | Final dataset shape: (842160, 71)
+INFO | Rows removed: 0
+INFO | Starting feature engineering
+INFO | Adding time-based features
+INFO | Adding lag features
+INFO | Adding rolling features
+INFO | Calculating deviation from baseline
+INFO | Adding severity categories
+INFO | Adding weather interaction flags
+INFO | Adding event flags
+INFO | Feature engineering completed
+INFO | Preprocessing completed
+INFO | Profiling stage initialized (not implemented yet)
+INFO | Execution completed
+INFO | Logger initialized
+INFO | Starting CLI with stage: profiling
+INFO | Starting EDA pipeline
+INFO | Loading data from data/raw/INDIA_AQI_COMPLETE_20251126.csv
+INFO | Data loaded successfully | Shape: (842160, 71)
+INFO | Datetime parsing successful
+INFO | Validating schema
+INFO | Schema validation passed
+INFO | Validating data ranges
+INFO | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+INFO | Checking duplicate records
+INFO | Duplicate rows: 0
+INFO | Starting data cleaning
+INFO | Removed duplicates: 0
+INFO | Final dataset shape: (842160, 71)
+INFO | Rows removed: 0
+INFO | Starting feature engineering
+INFO | Adding time-based features
+INFO | Adding lag features
+INFO | Adding rolling features
+INFO | Calculating deviation from baseline
+INFO | Adding severity categories
+INFO | Adding weather interaction flags
+INFO | Adding event flags
+INFO | Feature engineering completed
+INFO | Starting profiling analysis
+INFO | Running global distribution profiling
+INFO | Global stats: {'mean': np.float64(34.73964246698964), 'median': np.float64(25.9), 'std': np.float64(30.84349611479471), 'skewness': np.float64(2.5428533421546824), 'kurtosis': np.float64(10.50788591117613), 'min': np.float64(0.1), 'max': np.float64(581.1), 'p95': np.float64(93.8), 'p99': np.float64(155.1)}
+INFO | Calculating mean-median divergence
+INFO | Mean-Median Gap: {'mean': np.float64(34.73964246698964), 'median': np.float64(25.9), 'gap': np.float64(8.839642466989645), 'gap_ratio': np.float64(0.25445404268018196)}
+INFO | Analyzing tail risk
+INFO | Tail risk stats: {'total_records': 842160, 'severe_count': np.int64(740), 'severe_percentage': np.float64(0.0008786928849624775)}
+INFO | Calculating contribution of extreme values
+INFO | Extreme contribution: {'p95_threshold': np.float64(93.8), 'extreme_contribution_ratio': np.float64(0.18846409389735877)}
+INFO | Applying log transformation
+INFO | Log distribution stats: {'log_mean': np.float64(3.2743357270434386), 'log_std': np.float64(0.7924186122899202), 'log_skew': np.float64(-0.1594869975577457)}
+INFO | Profiling distribution per city
+INFO | Analyzing missing values
+INFO | Saved: outputs/tables/global_profiling.csv
+INFO | Saved: outputs/tables/mean_median_profiling.csv
+INFO | Saved: outputs/tables/tail_profiling.csv
+INFO | Saved: outputs/tables/extreme_profiling.csv
+INFO | Saved: outputs/tables/log_profiling.csv
+INFO | Saved: outputs/tables/city_profiling.csv
+INFO | Saved: outputs/tables/missing_profiling.csv
+INFO | Profiling completed
+INFO | Preprocessing completed
+INFO | Profiling stage initialized (not implemented yet)
+INFO | Execution completed
+INFO | Logger initialized
+INFO | Starting CLI with stage: profiling
+INFO | Starting EDA pipeline
+INFO | Loading data from data/raw/INDIA_AQI_COMPLETE_20251126.csv
+INFO | Data loaded successfully | Shape: (842160, 71)
+INFO | Datetime parsing successful
+INFO | Validating schema
+INFO | Schema validation passed
+INFO | Validating data ranges
+INFO | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+INFO | Checking duplicate records
+INFO | Duplicate rows: 0
+INFO | Starting data cleaning
+INFO | Removed duplicates: 0
+INFO | Final dataset shape: (842160, 71)
+INFO | Rows removed: 0
+INFO | Starting feature engineering
+INFO | Adding time-based features
+INFO | Adding lag features
+INFO | Adding rolling features
+INFO | Calculating deviation from baseline
+INFO | Adding severity categories
+INFO | Adding weather interaction flags
+INFO | Adding event flags
+INFO | Feature engineering completed
+INFO | Starting profiling analysis
+INFO | Running global distribution profiling
+INFO | Global stats: {'mean': np.float64(34.73964246698964), 'median': np.float64(25.9), 'std': np.float64(30.84349611479471), 'skewness': np.float64(2.5428533421546824), 'kurtosis': np.float64(10.50788591117613), 'min': np.float64(0.1), 'max': np.float64(581.1), 'p95': np.float64(93.8), 'p99': np.float64(155.1)}
+INFO | Calculating mean-median divergence
+INFO | Mean-Median Gap: {'mean': np.float64(34.73964246698964), 'median': np.float64(25.9), 'gap': np.float64(8.839642466989645), 'gap_ratio': np.float64(0.25445404268018196)}
+INFO | Analyzing tail risk
+INFO | Tail risk stats: {'total_records': 842160, 'severe_count': np.int64(740), 'severe_percentage': np.float64(0.0008786928849624775)}
+INFO | Calculating contribution of extreme values
+INFO | Extreme contribution: {'p95_threshold': np.float64(93.8), 'extreme_contribution_ratio': np.float64(0.18846409389735877)}
+INFO | Applying log transformation
+INFO | Log distribution stats: {'log_mean': np.float64(3.2743357270434386), 'log_std': np.float64(0.7924186122899202), 'log_skew': np.float64(-0.1594869975577457)}
+INFO | Profiling distribution per city
+INFO | Analyzing missing values
+INFO | Saved: outputs/tables/global_profiling.csv
+INFO | Saved: outputs/tables/mean_median_profiling.csv
+INFO | Saved: outputs/tables/tail_profiling.csv
+INFO | Saved: outputs/tables/extreme_profiling.csv
+INFO | Saved: outputs/tables/log_profiling.csv
+INFO | Saved: outputs/tables/city_profiling.csv
+INFO | Saved: outputs/tables/missing_profiling.csv
+INFO | Profiling completed
+INFO | Preprocessing completed
+INFO | Profiling stage initialized (not implemented yet)
+INFO | Execution completed
+INFO | Logger initialized
+INFO | Starting CLI with stage: temporal
+INFO | Starting EDA pipeline
+INFO | Loading data from data/raw/INDIA_AQI_COMPLETE_20251126.csv
+INFO | Data loaded successfully | Shape: (842160, 71)
+INFO | Datetime parsing successful
+INFO | Validating schema
+INFO | Schema validation passed
+INFO | Validating data ranges
+INFO | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+INFO | Checking duplicate records
+INFO | Duplicate rows: 0
+INFO | Starting data cleaning
+INFO | Removed duplicates: 0
+INFO | Final dataset shape: (842160, 71)
+INFO | Rows removed: 0
+INFO | Starting feature engineering
+INFO | Adding time-based features
+INFO | Adding lag features
+INFO | Adding rolling features
+INFO | Calculating deviation from baseline
+INFO | Adding severity categories
+INFO | Adding weather interaction flags
+INFO | Adding event flags
+INFO | Feature engineering completed
+INFO | Starting temporal analysis
+INFO | Aggregating data to daily and monthly levels
+INFO | Computing rolling trend and volatility
+INFO | Analyzing diurnal (hourly) patterns
+INFO | Analyzing seasonal trends
+INFO | Computing lag correlation
+INFO | Detecting volatility regimes
+INFO | Saved: outputs/tables/daily_temporal.csv
+INFO | Saved: outputs/tables/monthly_temporal.csv
+INFO | Saved: outputs/tables/diurnal_temporal.csv
+INFO | Saved: outputs/tables/seasonal_temporal.csv
+INFO | Saved: outputs/tables/lag_temporal.csv
+INFO | Saved: outputs/tables/volatility_temporal.csv
+INFO | Temporal analysis completed
+INFO | Preprocessing completed
+WARNING | Unknown stage: temporal
+INFO | Execution completed
+INFO | Logger initialized
+INFO | Starting CLI with stage: interactions
+INFO | Starting EDA pipeline
+INFO | Loading data from data/raw/INDIA_AQI_COMPLETE_20251126.csv
+INFO | Data loaded successfully | Shape: (842160, 71)
+INFO | Datetime parsing successful
+INFO | Validating schema
+INFO | Schema validation passed
+INFO | Validating data ranges
+INFO | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+INFO | Checking duplicate records
+INFO | Duplicate rows: 0
+INFO | Starting data cleaning
+INFO | Removed duplicates: 0
+INFO | Final dataset shape: (842160, 71)
+INFO | Rows removed: 0
+INFO | Starting feature engineering
+INFO | Adding time-based features
+INFO | Adding lag features
+INFO | Adding rolling features
+INFO | Calculating deviation from baseline
+INFO | Adding severity categories
+INFO | Adding weather interaction flags
+INFO | Adding event flags
+INFO | Feature engineering completed
+INFO | Starting interaction analysis
+INFO | Analyzing Wind × Season interaction
+INFO | Analyzing Humidity × Season interaction
+INFO | Analyzing Wind × Humidity interaction
+INFO | Analyzing Event × Season interaction
+INFO | Computing conditional probability of severe pollution
+INFO | Evaluating interaction strength
+INFO | Analyzing city-level interaction effects
+INFO | Saved: outputs/tables/wind_season_interaction.csv
+INFO | Saved: outputs/tables/humidity_season_interaction.csv
+INFO | Saved: outputs/tables/wind_humidity_interaction.csv
+INFO | Saved: outputs/tables/event_season_interaction.csv
+INFO | Saved: outputs/tables/severe_prob_interaction.csv
+INFO | Saved: outputs/tables/strength_interaction.csv
+INFO | Saved: outputs/tables/city_interaction_interaction.csv
+INFO | Interaction analysis completed
+INFO | Preprocessing completed
+WARNING | Unknown stage: interactions
+INFO | Execution completed
+INFO | Logger initialized
+INFO | Starting CLI with stage: interactions
+INFO | Starting EDA pipeline (analysis stage=interactions)
+INFO | Shared preprocessing always runs: load → validate → clean → feature engineering
+INFO | Loading data from data/raw/INDIA_AQI_COMPLETE_20251126.csv
+INFO | Data loaded successfully | Shape: (842160, 71)
+INFO | Datetime parsing successful
+INFO | Validating schema
+INFO | Schema validation passed
+INFO | Validating data ranges
+INFO | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+INFO | Checking duplicate records
+INFO | Duplicate rows: 0
+INFO | Starting data cleaning
+INFO | Removed duplicates: 0
+INFO | Final dataset shape: (842160, 71)
+INFO | Rows removed: 0
+INFO | Starting feature engineering
+INFO | Adding time-based features
+INFO | Adding lag features
+INFO | Adding rolling features
+INFO | Calculating deviation from baseline
+INFO | Adding severity categories
+INFO | Adding weather interaction flags
+INFO | Adding event flags
+INFO | Feature engineering completed
+INFO | Starting interaction analysis
+INFO | Analyzing Wind × Season interaction
+INFO | Analyzing Humidity × Season interaction
+INFO | Analyzing Wind × Humidity interaction
+INFO | Analyzing Event × Season interaction
+INFO | Computing conditional probability of severe pollution
+INFO | Evaluating interaction strength
+INFO | Analyzing city-level interaction effects
+INFO | Saved: outputs/tables/wind_season_interaction.csv
+INFO | Saved: outputs/tables/humidity_season_interaction.csv
+INFO | Saved: outputs/tables/wind_humidity_interaction.csv
+INFO | Saved: outputs/tables/event_season_interaction.csv
+INFO | Saved: outputs/tables/severe_prob_interaction.csv
+INFO | Saved: outputs/tables/strength_interaction.csv
+INFO | Saved: outputs/tables/city_interaction_interaction.csv
+INFO | Interaction analysis completed
+INFO | Analysis steps executed: interactions
+INFO | EDA pipeline completed
+INFO | Execution completed (stage=interactions)
+INFO | Logger initialized
+INFO | Starting CLI with stage: events
+INFO | Starting EDA pipeline (analysis stage=events)
+INFO | Shared preprocessing always runs: load → validate → clean → feature engineering
+INFO | Loading data from data/raw/INDIA_AQI_COMPLETE_20251126.csv
+INFO | Data loaded successfully | Shape: (842160, 71)
+INFO | Datetime parsing successful
+INFO | Validating schema
+INFO | Schema validation passed
+INFO | Validating data ranges
+INFO | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+INFO | Checking duplicate records
+INFO | Duplicate rows: 0
+INFO | Starting data cleaning
+INFO | Removed duplicates: 0
+INFO | Final dataset shape: (842160, 71)
+INFO | Rows removed: 0
+INFO | Starting feature engineering
+INFO | Adding time-based features
+INFO | Adding lag features
+INFO | Adding rolling features
+INFO | Calculating deviation from baseline
+INFO | Adding severity categories
+INFO | Adding weather interaction flags
+INFO | Adding event flags
+INFO | Feature engineering completed
+INFO | Starting event analysis
+INFO | Computing rolling baseline
+INFO | Analyzing festival impact
+INFO | Analyzing crop burning impact
+INFO | Calculating event amplification factor
+INFO | Analyzing severity during events
+INFO | Saved: outputs/tables/festival_events.csv
+INFO | Saved: outputs/tables/crop_events.csv
+INFO | Saved: outputs/tables/amplification_events.csv
+INFO | Saved: outputs/tables/severity_events.csv
+INFO | Event analysis completed
+INFO | Starting extreme event analysis
+INFO | Analyzing conditions during extreme events
+INFO | Extracting extreme pollution events
+INFO | Analyzing extreme event distribution
+INFO | Extracting extreme pollution events
+INFO | Computing probability of extreme events
+INFO | Saved: outputs/tables/conditions_extremes.csv
+INFO | Saved: outputs/tables/distribution_extremes.csv
+INFO | Saved: outputs/tables/probability_extremes.csv
+INFO | Extreme analysis completed
+INFO | Analysis steps executed: events, extremes
+INFO | EDA pipeline completed
+INFO | Execution completed (stage=events)
+INFO | Logger initialized
+INFO | Starting CLI with stage: full
+INFO | Starting EDA pipeline (analysis stage=full)
+INFO | Shared preprocessing always runs: load → validate → clean → feature engineering
+INFO | Loading data from data/raw/INDIA_AQI_COMPLETE_20251126.csv
+INFO | Data loaded successfully | Shape: (842160, 71)
+INFO | Datetime parsing successful
+INFO | Validating schema
+INFO | Schema validation passed
+INFO | Validating data ranges
+INFO | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+INFO | Checking duplicate records
+INFO | Duplicate rows: 0
+INFO | Starting data cleaning
+INFO | Removed duplicates: 0
+INFO | Final dataset shape: (842160, 71)
+INFO | Rows removed: 0
+INFO | Starting feature engineering
+INFO | Adding time-based features
+INFO | Adding lag features
+INFO | Adding rolling features
+INFO | Calculating deviation from baseline
+INFO | Adding severity categories
+INFO | Adding weather interaction flags
+INFO | Adding event flags
+INFO | Feature engineering completed
+INFO | Starting profiling analysis
+INFO | Running global distribution profiling
+INFO | Global stats: {'mean': np.float64(34.73964246698964), 'median': np.float64(25.9), 'std': np.float64(30.84349611479471), 'skewness': np.float64(2.5428533421546824), 'kurtosis': np.float64(10.50788591117613), 'min': np.float64(0.1), 'max': np.float64(581.1), 'p95': np.float64(93.8), 'p99': np.float64(155.1)}
+INFO | Calculating mean-median divergence
+INFO | Mean-Median Gap: {'mean': np.float64(34.73964246698964), 'median': np.float64(25.9), 'gap': np.float64(8.839642466989645), 'gap_ratio': np.float64(0.25445404268018196)}
+INFO | Analyzing tail risk
+INFO | Tail risk stats: {'total_records': 842160, 'severe_count': np.int64(740), 'severe_percentage': np.float64(0.0008786928849624775)}
+INFO | Calculating contribution of extreme values
+INFO | Extreme contribution: {'p95_threshold': np.float64(93.8), 'extreme_contribution_ratio': np.float64(0.18846409389735877)}
+INFO | Applying log transformation
+INFO | Log distribution stats: {'log_mean': np.float64(3.2743357270434386), 'log_std': np.float64(0.7924186122899202), 'log_skew': np.float64(-0.1594869975577457)}
+INFO | Profiling distribution per city
+INFO | Analyzing missing values
+INFO | Saved: outputs/tables/global_profiling.csv
+INFO | Saved: outputs/tables/mean_median_profiling.csv
+INFO | Saved: outputs/tables/tail_profiling.csv
+INFO | Saved: outputs/tables/extreme_profiling.csv
+INFO | Saved: outputs/tables/log_profiling.csv
+INFO | Saved: outputs/tables/city_profiling.csv
+INFO | Saved: outputs/tables/missing_profiling.csv
+INFO | Profiling completed
+INFO | Starting temporal analysis
+INFO | Aggregating data to daily and monthly levels
+INFO | Computing rolling trend and volatility
+INFO | Analyzing diurnal (hourly) patterns
+INFO | Analyzing seasonal trends
+INFO | Computing lag correlation
+INFO | Detecting volatility regimes
+INFO | Saved: outputs/tables/daily_temporal.csv
+INFO | Saved: outputs/tables/monthly_temporal.csv
+INFO | Saved: outputs/tables/diurnal_temporal.csv
+INFO | Saved: outputs/tables/seasonal_temporal.csv
+INFO | Saved: outputs/tables/lag_temporal.csv
+INFO | Saved: outputs/tables/volatility_temporal.csv
+INFO | Temporal analysis completed
+INFO | Starting interaction analysis
+INFO | Analyzing Wind × Season interaction
+INFO | Analyzing Humidity × Season interaction
+INFO | Analyzing Wind × Humidity interaction
+INFO | Analyzing Event × Season interaction
+INFO | Computing conditional probability of severe pollution
+INFO | Evaluating interaction strength
+INFO | Analyzing city-level interaction effects
+INFO | Saved: outputs/tables/wind_season_interaction.csv
+INFO | Saved: outputs/tables/humidity_season_interaction.csv
+INFO | Saved: outputs/tables/wind_humidity_interaction.csv
+INFO | Saved: outputs/tables/event_season_interaction.csv
+INFO | Saved: outputs/tables/severe_prob_interaction.csv
+INFO | Saved: outputs/tables/strength_interaction.csv
+INFO | Saved: outputs/tables/city_interaction_interaction.csv
+INFO | Interaction analysis completed
+INFO | Starting event analysis
+INFO | Computing rolling baseline
+INFO | Analyzing festival impact
+INFO | Analyzing crop burning impact
+INFO | Calculating event amplification factor
+INFO | Analyzing severity during events
+INFO | Saved: outputs/tables/festival_events.csv
+INFO | Saved: outputs/tables/crop_events.csv
+INFO | Saved: outputs/tables/amplification_events.csv
+INFO | Saved: outputs/tables/severity_events.csv
+INFO | Event analysis completed
+INFO | Starting extreme event analysis
+INFO | Analyzing conditions during extreme events
+INFO | Extracting extreme pollution events
+INFO | Analyzing extreme event distribution
+INFO | Extracting extreme pollution events
+INFO | Computing probability of extreme events
+INFO | Saved: outputs/tables/conditions_extremes.csv
+INFO | Saved: outputs/tables/distribution_extremes.csv
+INFO | Saved: outputs/tables/probability_extremes.csv
+INFO | Extreme analysis completed
+INFO | Building all Tableau datasets
+INFO | Building overview dataset
+INFO | Building temporal dataset
+INFO | Building city comparison dataset
+INFO | Building interaction dataset
+INFO | Building event dataset
+ERROR | Pipeline failed during EDA run
+Traceback (most recent call last):
+  File "/Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/cli.py", line 48, in main
+    df = run_eda(stage)
+  File "/Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/src/pipelines/eda_pipeline.py", line 69, in run_eda
+    build_all_datasets(df)
+    ~~~~~~~~~~~~~~~~~~^^^^
+  File "/Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/src/analysis/synthesis.py", line 127, in build_all_datasets
+    "events": build_events(df),
+              ~~~~~~~~~~~~^^^^
+  File "/Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/src/analysis/synthesis.py", line 85, in build_events
+    result = df.groupby(["event_type", "Season"]).agg({
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+        "PM2_5_ugm3": "mean",
+        ^^^^^^^^^^^^^^^^^^^^^
+        "event_delta": "mean",
+        ^^^^^^^^^^^^^^^^^^^^^^
+        "is_severe": "mean"
+        ^^^^^^^^^^^^^^^^^^^
+    }).reset_index()
+    ^^
+  File "/Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/.venv/lib/python3.14/site-packages/pandas/core/groupby/generic.py", line 2291, in aggregate
+    result = op.agg()
+  File "/Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/.venv/lib/python3.14/site-packages/pandas/core/apply.py", line 294, in agg
+    return self.agg_dict_like()
+           ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/.venv/lib/python3.14/site-packages/pandas/core/apply.py", line 511, in agg_dict_like
+    return self.agg_or_apply_dict_like(op_name="agg")
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/.venv/lib/python3.14/site-packages/pandas/core/apply.py", line 1677, in agg_or_apply_dict_like
+    result_index, result_data = self.compute_dict_like(
+                                ~~~~~~~~~~~~~~~~~~~~~~^
+        op_name, selected_obj, selection, kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/.venv/lib/python3.14/site-packages/pandas/core/apply.py", line 550, in compute_dict_like
+    func = self.normalize_dictlike_arg(op_name, selected_obj, func)
+  File "/Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/.venv/lib/python3.14/site-packages/pandas/core/apply.py", line 762, in normalize_dictlike_arg
+    raise KeyError(f"Label(s) {list(cols)} do not exist")
+KeyError: "Label(s) ['event_delta'] do not exist"
+INFO | Logger initialized
+INFO | Starting CLI with stage: full
+INFO | Starting EDA pipeline (analysis stage=full)
+INFO | Shared preprocessing always runs: load → validate → clean → feature engineering
+INFO | Loading data from data/raw/INDIA_AQI_COMPLETE_20251126.csv
+INFO | Data loaded successfully | Shape: (842160, 71)
+INFO | Datetime parsing successful
+INFO | Validating schema
+INFO | Schema validation passed
+INFO | Validating data ranges
+INFO | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+INFO | Checking duplicate records
+INFO | Duplicate rows: 0
+INFO | Starting data cleaning
+INFO | Removed duplicates: 0
+INFO | Final dataset shape: (842160, 71)
+INFO | Rows removed: 0
+INFO | Starting feature engineering
+INFO | Adding time-based features
+INFO | Adding lag features
+INFO | Adding rolling features
+INFO | Calculating deviation from baseline
+INFO | Adding severity categories
+INFO | Adding weather interaction flags
+INFO | Adding event flags
+INFO | Feature engineering completed
+INFO | Starting profiling analysis
+INFO | Running global distribution profiling
+INFO | Global stats: {'mean': np.float64(34.73964246698964), 'median': np.float64(25.9), 'std': np.float64(30.84349611479471), 'skewness': np.float64(2.5428533421546824), 'kurtosis': np.float64(10.50788591117613), 'min': np.float64(0.1), 'max': np.float64(581.1), 'p95': np.float64(93.8), 'p99': np.float64(155.1)}
+INFO | Calculating mean-median divergence
+INFO | Mean-Median Gap: {'mean': np.float64(34.73964246698964), 'median': np.float64(25.9), 'gap': np.float64(8.839642466989645), 'gap_ratio': np.float64(0.25445404268018196)}
+INFO | Analyzing tail risk
+INFO | Tail risk stats: {'total_records': 842160, 'severe_count': np.int64(740), 'severe_percentage': np.float64(0.0008786928849624775)}
+INFO | Calculating contribution of extreme values
+INFO | Extreme contribution: {'p95_threshold': np.float64(93.8), 'extreme_contribution_ratio': np.float64(0.18846409389735877)}
+INFO | Applying log transformation
+INFO | Log distribution stats: {'log_mean': np.float64(3.2743357270434386), 'log_std': np.float64(0.7924186122899202), 'log_skew': np.float64(-0.1594869975577457)}
+INFO | Profiling distribution per city
+INFO | Analyzing missing values
+INFO | Saved: outputs/tables/global_profiling.csv
+INFO | Saved: outputs/tables/mean_median_profiling.csv
+INFO | Saved: outputs/tables/tail_profiling.csv
+INFO | Saved: outputs/tables/extreme_profiling.csv
+INFO | Saved: outputs/tables/log_profiling.csv
+INFO | Saved: outputs/tables/city_profiling.csv
+INFO | Saved: outputs/tables/missing_profiling.csv
+INFO | Profiling completed
+INFO | Starting temporal analysis
+INFO | Aggregating data to daily and monthly levels
+INFO | Computing rolling trend and volatility
+INFO | Analyzing diurnal (hourly) patterns
+INFO | Analyzing seasonal trends
+INFO | Computing lag correlation
+INFO | Detecting volatility regimes
+INFO | Saved: outputs/tables/daily_temporal.csv
+INFO | Saved: outputs/tables/monthly_temporal.csv
+INFO | Saved: outputs/tables/diurnal_temporal.csv
+INFO | Saved: outputs/tables/seasonal_temporal.csv
+INFO | Saved: outputs/tables/lag_temporal.csv
+INFO | Saved: outputs/tables/volatility_temporal.csv
+INFO | Temporal analysis completed
+INFO | Starting interaction analysis
+INFO | Analyzing Wind × Season interaction
+INFO | Analyzing Humidity × Season interaction
+INFO | Analyzing Wind × Humidity interaction
+INFO | Analyzing Event × Season interaction
+INFO | Computing conditional probability of severe pollution
+INFO | Evaluating interaction strength
+INFO | Analyzing city-level interaction effects
+INFO | Saved: outputs/tables/wind_season_interaction.csv
+INFO | Saved: outputs/tables/humidity_season_interaction.csv
+INFO | Saved: outputs/tables/wind_humidity_interaction.csv
+INFO | Saved: outputs/tables/event_season_interaction.csv
+INFO | Saved: outputs/tables/severe_prob_interaction.csv
+INFO | Saved: outputs/tables/strength_interaction.csv
+INFO | Saved: outputs/tables/city_interaction_interaction.csv
+INFO | Interaction analysis completed
+INFO | Starting event analysis
+INFO | Computing rolling baseline
+INFO | Analyzing festival impact
+INFO | Analyzing crop burning impact
+INFO | Calculating event amplification factor
+INFO | Analyzing severity during events
+INFO | Saved: outputs/tables/festival_events.csv
+INFO | Saved: outputs/tables/crop_events.csv
+INFO | Saved: outputs/tables/amplification_events.csv
+INFO | Saved: outputs/tables/severity_events.csv
+INFO | Event analysis completed
+INFO | Starting extreme event analysis
+INFO | Analyzing conditions during extreme events
+INFO | Extracting extreme pollution events
+INFO | Analyzing extreme event distribution
+INFO | Extracting extreme pollution events
+INFO | Computing probability of extreme events
+INFO | Saved: outputs/tables/conditions_extremes.csv
+INFO | Saved: outputs/tables/distribution_extremes.csv
+INFO | Saved: outputs/tables/probability_extremes.csv
+INFO | Extreme analysis completed
+INFO | Building all Tableau datasets
+INFO | Building overview dataset
+INFO | Building temporal dataset
+INFO | Building city comparison dataset
+INFO | Building interaction dataset
+INFO | Building event dataset
+INFO | Building extreme dataset
+INFO | Saved: outputs/tables/overview_dashboard.csv
+INFO | Saved: outputs/tables/temporal_dashboard.csv
+INFO | Saved: outputs/tables/city_dashboard.csv
+INFO | Saved: outputs/tables/interaction_dashboard.csv
+INFO | Saved: outputs/tables/events_dashboard.csv
+INFO | Saved: outputs/tables/extremes_dashboard.csv
+INFO | All datasets ready for Tableau
+INFO | Analysis steps executed: profiling, temporal, interactions, events, extremes
+INFO | EDA pipeline completed
+INFO | Execution completed (stage=full)
+INFO | Logger initialized
+INFO | Starting CLI with stage: full
+INFO | Starting EDA pipeline (analysis stage=full)
+INFO | Shared preprocessing always runs: load → validate → clean → feature engineering
+INFO | Loading data from data/raw/INDIA_AQI_COMPLETE_20251126.csv
+INFO | Data loaded successfully | Shape: (842160, 71)
+INFO | Datetime parsing successful
+INFO | Validating schema
+INFO | Schema validation passed
+INFO | Validating data ranges
+INFO | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+INFO | Checking duplicate records
+INFO | Duplicate rows: 0
+INFO | Starting data cleaning
+INFO | Removed duplicates: 0
+INFO | Final dataset shape: (842160, 71)
+INFO | Rows removed: 0
+INFO | Starting feature engineering
+INFO | Adding time-based features
+INFO | Adding lag features
+INFO | Adding rolling features
+INFO | Calculating deviation from baseline
+INFO | Adding severity categories
+INFO | Adding weather interaction flags
+INFO | Adding event flags
+INFO | Feature engineering completed
+INFO | Starting profiling analysis
+INFO | Running global distribution profiling
+INFO | Global stats: {'mean': np.float64(34.73964246698964), 'median': np.float64(25.9), 'std': np.float64(30.84349611479471), 'skewness': np.float64(2.5428533421546824), 'kurtosis': np.float64(10.50788591117613), 'min': np.float64(0.1), 'max': np.float64(581.1), 'p95': np.float64(93.8), 'p99': np.float64(155.1)}
+INFO | Calculating mean-median divergence
+INFO | Mean-Median Gap: {'mean': np.float64(34.73964246698964), 'median': np.float64(25.9), 'gap': np.float64(8.839642466989645), 'gap_ratio': np.float64(0.25445404268018196)}
+INFO | Analyzing tail risk
+INFO | Tail risk stats: {'total_records': 842160, 'severe_count': np.int64(740), 'severe_percentage': np.float64(0.0008786928849624775)}
+INFO | Calculating contribution of extreme values
+INFO | Extreme contribution: {'p95_threshold': np.float64(93.8), 'extreme_contribution_ratio': np.float64(0.18846409389735877)}
+INFO | Applying log transformation
+INFO | Log distribution stats: {'log_mean': np.float64(3.2743357270434386), 'log_std': np.float64(0.7924186122899202), 'log_skew': np.float64(-0.1594869975577457)}
+INFO | Profiling distribution per city
+INFO | Analyzing missing values
+INFO | Saved: outputs/tables/global_profiling.csv
+INFO | Saved: outputs/tables/mean_median_profiling.csv
+INFO | Saved: outputs/tables/tail_profiling.csv
+INFO | Saved: outputs/tables/extreme_profiling.csv
+INFO | Saved: outputs/tables/log_profiling.csv
+INFO | Saved: outputs/tables/city_profiling.csv
+INFO | Saved: outputs/tables/missing_profiling.csv
+INFO | Profiling completed
+INFO | Starting temporal analysis
+INFO | Aggregating data to daily and monthly levels
+INFO | Computing rolling trend and volatility
+INFO | Analyzing diurnal (hourly) patterns
+INFO | Analyzing seasonal trends
+INFO | Computing lag correlation
+INFO | Detecting volatility regimes
+INFO | Saved: outputs/tables/daily_temporal.csv
+INFO | Saved: outputs/tables/monthly_temporal.csv
+INFO | Saved: outputs/tables/diurnal_temporal.csv
+INFO | Saved: outputs/tables/seasonal_temporal.csv
+INFO | Saved: outputs/tables/lag_temporal.csv
+INFO | Saved: outputs/tables/volatility_temporal.csv
+INFO | Temporal analysis completed
+INFO | Starting interaction analysis
+INFO | Analyzing Wind × Season interaction
+INFO | Analyzing Humidity × Season interaction
+INFO | Analyzing Wind × Humidity interaction
+INFO | Analyzing Event × Season interaction
+INFO | Computing conditional probability of severe pollution
+INFO | Evaluating interaction strength
+INFO | Analyzing city-level interaction effects
+INFO | Saved: outputs/tables/wind_season_interaction.csv
+INFO | Saved: outputs/tables/humidity_season_interaction.csv
+INFO | Saved: outputs/tables/wind_humidity_interaction.csv
+INFO | Saved: outputs/tables/event_season_interaction.csv
+INFO | Saved: outputs/tables/severe_prob_interaction.csv
+INFO | Saved: outputs/tables/strength_interaction.csv
+INFO | Saved: outputs/tables/city_interaction_interaction.csv
+INFO | Interaction analysis completed
+INFO | Starting event analysis
+INFO | Computing rolling baseline
+INFO | Analyzing festival impact
+INFO | Analyzing crop burning impact
+INFO | Calculating event amplification factor
+INFO | Analyzing severity during events
+INFO | Saved: outputs/tables/festival_events.csv
+INFO | Saved: outputs/tables/crop_events.csv
+INFO | Saved: outputs/tables/amplification_events.csv
+INFO | Saved: outputs/tables/severity_events.csv
+INFO | Event analysis completed
+INFO | Starting extreme event analysis
+INFO | Analyzing conditions during extreme events
+INFO | Extracting extreme pollution events
+INFO | Analyzing extreme event distribution
+INFO | Extracting extreme pollution events
+INFO | Computing probability of extreme events
+INFO | Saved: outputs/tables/conditions_extremes.csv
+INFO | Saved: outputs/tables/distribution_extremes.csv
+INFO | Saved: outputs/tables/probability_extremes.csv
+INFO | Extreme analysis completed
+INFO | Building all Tableau datasets
+INFO | Building overview dataset
+INFO | Building temporal dataset
+INFO | Building city comparison dataset
+INFO | Building interaction dataset
+INFO | Building event dataset
+INFO | Building extreme dataset
+INFO | Saved: outputs/Tables/Tableau/overview_dashboard.csv
+INFO | Saved: outputs/Tables/Tableau/temporal_dashboard.csv
+INFO | Saved: outputs/Tables/Tableau/city_dashboard.csv
+INFO | Saved: outputs/Tables/Tableau/interaction_dashboard.csv
+INFO | Saved: outputs/Tables/Tableau/events_dashboard.csv
+INFO | Saved: outputs/Tables/Tableau/extremes_dashboard.csv
+INFO | All datasets ready for Tableau
+INFO | Analysis steps executed: profiling, temporal, interactions, events, extremes
+INFO | EDA pipeline completed
+INFO | Execution completed (stage=full)
+INFO | Logger initialized
+INFO | Starting CLI with stage: visual
+INFO | Starting EDA pipeline (analysis stage=visual)
+INFO | Shared preprocessing always runs: load → validate → clean → feature engineering
+INFO | Loading data from data/raw/INDIA_AQI_COMPLETE_20251126.csv
+INFO | Data loaded successfully | Shape: (842160, 71)
+INFO | Datetime parsing successful
+INFO | Validating schema
+INFO | Schema validation passed
+INFO | Validating data ranges
+INFO | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+INFO | Checking duplicate records
+INFO | Duplicate rows: 0
+INFO | Starting data cleaning
+INFO | Removed duplicates: 0
+INFO | Final dataset shape: (842160, 71)
+INFO | Rows removed: 0
+INFO | Starting feature engineering
+INFO | Adding time-based features
+INFO | Adding lag features
+INFO | Adding rolling features
+INFO | Calculating deviation from baseline
+INFO | Adding severity categories
+INFO | Adding weather interaction flags
+INFO | Adding event flags
+INFO | Feature engineering completed
+WARNING | Matplotlib is building the font cache; this may take a moment.
+INFO | Failed to extract font properties from /System/Library/Fonts/Supplemental/NISC18030.ttf: Could not set the fontsize (invalid pixel size; error code 0x17)
+INFO | Failed to extract font properties from /System/Library/Fonts/Apple Color Emoji.ttc: Could not set the fontsize (invalid pixel size; error code 0x17)
+INFO | Failed to extract font properties from /System/Library/PrivateFrameworks/FontServices.framework/Resources/Reserved/PingFangUI.ttc: Can not load face (locations (loca) table missing; error code 0x90)
+INFO | Failed to extract font properties from /System/Library/Fonts/SFIndia.ttc: Can not load face (SFNT font table missing; error code 0x8e)
+INFO | Failed to extract font properties from /System/Library/Fonts/LastResort.otf: tuple indices must be integers or slices, not str
+INFO | generated new fontManager
+INFO | Starting visualization module
+INFO | Running univariate analysis
+INFO | Plotting log distribution
+INFO | Plotting wind vs PM2.5
+INFO | Plotting humidity vs PM2.5
+INFO | Generating correlation heatmap
+INFO | Plotting seasonal boxplot
+INFO | Visualization completed
+INFO | Analysis steps executed: visual
+INFO | EDA pipeline completed
+INFO | Execution completed (stage=visual)
+INFO | Logger initialized
+INFO | Starting CLI with stage: predict
+INFO | City for forecast: Delhi
+INFO | Starting EDA pipeline (analysis stage=predict)
+INFO | Shared preprocessing always runs: load → validate → clean → feature engineering
+INFO | Loading data from data/raw/INDIA_AQI_COMPLETE_20251126.csv
+INFO | Data loaded successfully | Shape: (842160, 71)
+INFO | Datetime parsing successful
+INFO | Validating schema
+INFO | Schema validation passed
+INFO | Validating data ranges
+INFO | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+INFO | Checking duplicate records
+INFO | Duplicate rows: 0
+INFO | Starting data cleaning
+INFO | Removed duplicates: 0
+INFO | Final dataset shape: (842160, 71)
+INFO | Rows removed: 0
+INFO | Starting feature engineering
+INFO | Adding time-based features
+INFO | Adding lag features
+INFO | Adding rolling features
+INFO | Calculating deviation from baseline
+INFO | Adding severity categories
+INFO | Adding weather interaction flags
+INFO | Adding event flags
+INFO | Feature engineering completed
+INFO | Running forecast (predict) for city=Delhi
+INFO | Forecast model trained | city=Delhi | n=28848 | R^2 (in-sample)=0.9649
+INFO | Analysis steps executed: predict
+INFO | EDA pipeline completed
+INFO | Execution completed (stage=predict)
+05:22:35 | INFO | src.utils.logger | Logger initialized (file + Rich console)
+05:22:44 | INFO | src.prediction.loader | Loaded 29040 city rows (scanned 842160 raw rows) from chunks
+05:22:44 | INFO | src.preprocessing.validation | Validating schema
+05:22:44 | INFO | src.preprocessing.validation | Schema validation passed
+05:22:44 | INFO | src.preprocessing.validation | Validating data ranges
+05:22:44 | INFO | src.preprocessing.validation | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+05:22:45 | INFO | src.preprocessing.validation | Checking duplicate records
+05:22:45 | INFO | src.preprocessing.validation | Duplicate rows: 0
+05:22:45 | INFO | src.preprocessing.cleaning | Starting data cleaning
+05:22:45 | INFO | src.preprocessing.cleaning | Removed duplicates: 0
+05:22:45 | INFO | src.preprocessing.cleaning | Final dataset shape: (29040, 8)
+05:22:45 | INFO | src.preprocessing.cleaning | Rows removed: 0
+05:22:45 | INFO | src.preprocessing.feature_engineering | Starting feature engineering
+05:22:45 | INFO | src.preprocessing.feature_engineering | Adding time-based features
+05:22:45 | INFO | src.preprocessing.feature_engineering | Adding lag features
+05:22:45 | INFO | src.preprocessing.feature_engineering | Adding rolling features
+05:22:45 | INFO | src.preprocessing.feature_engineering | Calculating deviation from baseline
+05:22:45 | INFO | src.preprocessing.feature_engineering | Adding severity categories
+05:22:45 | INFO | src.preprocessing.feature_engineering | Adding weather interaction flags
+05:22:45 | INFO | src.preprocessing.feature_engineering | Adding event flags
+05:22:45 | INFO | src.preprocessing.feature_engineering | Feature engineering completed
+05:23:00 | INFO | src.analysis.forecasting | Horizon 1h | train 23063 / test 5807 | test R²=0.8318 | test MAE=10.350 | test RMSE=14.388
+05:23:12 | INFO | src.analysis.forecasting | Horizon 6h | train 23058 / test 5802 | test R²=0.4168 | test MAE=19.862 | test RMSE=26.786
+05:23:25 | INFO | src.analysis.forecasting | Horizon 12h | train 23052 / test 5796 | test R²=0.3684 | test MAE=20.888 | test RMSE=27.885
+05:23:34 | INFO | src.analysis.forecasting | Horizon 24h | train 23040 / test 5784 | test R²=0.5041 | test MAE=17.813 | test RMSE=24.701
+05:23:45 | INFO | src.analysis.forecasting | Horizon 48h | train 23016 / test 5760 | test R²=0.3667 | test MAE=20.615 | test RMSE=27.951
+05:24:09 | INFO | src.utils.logger | Logger initialized (file + Rich console)
+05:24:09 | INFO | src.pipelines.eda_pipeline | Starting EDA pipeline (analysis stage=full)
+05:24:09 | INFO | src.pipelines.eda_pipeline | Shared preprocessing always runs: load → validate → clean → feature engineering
+05:24:09 | INFO | src.ingestion.loader | Loading data from data/raw/INDIA_AQI_COMPLETE_20251126.csv
+05:24:29 | INFO | src.ingestion.loader | Data loaded successfully | Shape: (842160, 71)
+05:24:30 | INFO | src.ingestion.loader | Datetime parsing successful
+05:24:30 | INFO | src.preprocessing.validation | Validating schema
+05:24:30 | INFO | src.preprocessing.validation | Schema validation passed
+05:24:30 | INFO | src.preprocessing.validation | Validating data ranges
+05:24:30 | INFO | src.preprocessing.validation | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+05:24:30 | INFO | src.preprocessing.validation | Checking duplicate records
+05:24:38 | INFO | src.preprocessing.validation | Duplicate rows: 0
+05:24:38 | INFO | src.preprocessing.cleaning | Starting data cleaning
+05:24:45 | INFO | src.preprocessing.cleaning | Removed duplicates: 0
+05:24:45 | INFO | src.preprocessing.cleaning | Final dataset shape: (842160, 71)
+05:24:45 | INFO | src.preprocessing.cleaning | Rows removed: 0
+05:24:45 | INFO | src.preprocessing.feature_engineering | Starting feature engineering
+05:24:45 | INFO | src.preprocessing.feature_engineering | Adding time-based features
+05:24:45 | INFO | src.preprocessing.feature_engineering | Adding lag features
+05:24:46 | INFO | src.preprocessing.feature_engineering | Adding rolling features
+05:24:47 | INFO | src.preprocessing.feature_engineering | Calculating deviation from baseline
+05:24:47 | INFO | src.preprocessing.feature_engineering | Adding severity categories
+05:24:48 | INFO | src.preprocessing.feature_engineering | Adding weather interaction flags
+05:24:48 | INFO | src.preprocessing.feature_engineering | Adding event flags
+05:24:48 | INFO | src.preprocessing.feature_engineering | Feature engineering completed
+05:24:48 | INFO | src.analysis.profiling | Starting profiling analysis
+05:24:48 | INFO | src.analysis.profiling | Running global distribution profiling
+05:24:48 | INFO | src.analysis.profiling | Global stats: {'mean': np.float64(34.73964246698964), 'median': np.float64(25.9), 'std': np.float64(30.84349611479471), 'skewness': np.float64(2.5428533421546824), 'kurtosis': np.float64(10.50788591117613), 'min': np.float64(0.1), 'max': np.float64(581.1), 'p95': np.float64(93.8), 'p99': np.float64(155.1)}
+05:24:48 | INFO | src.analysis.profiling | Calculating mean-median divergence
+05:24:48 | INFO | src.analysis.profiling | Mean-Median Gap: {'mean': np.float64(34.73964246698964), 'median': np.float64(25.9), 'gap': np.float64(8.839642466989645), 'gap_ratio': np.float64(0.25445404268018196)}
+05:24:48 | INFO | src.analysis.profiling | Analyzing tail risk
+05:24:48 | INFO | src.analysis.profiling | Tail risk stats: {'total_records': 842160, 'severe_count': np.int64(740), 'severe_percentage': np.float64(0.0008786928849624775)}
+05:24:48 | INFO | src.analysis.profiling | Calculating contribution of extreme values
+05:24:48 | INFO | src.analysis.profiling | Extreme contribution: {'p95_threshold': np.float64(93.8), 'extreme_contribution_ratio': np.float64(0.18846409389735877)}
+05:24:48 | INFO | src.analysis.profiling | Applying log transformation
+05:24:48 | INFO | src.analysis.profiling | Log distribution stats: {'log_mean': np.float64(3.2743357270434386), 'log_std': np.float64(0.7924186122899202), 'log_skew': np.float64(-0.1594869975577457)}
+05:24:48 | INFO | src.analysis.profiling | Profiling distribution per city
+05:24:49 | INFO | src.analysis.profiling | Analyzing missing values
+05:24:53 | INFO | src.analysis.profiling | Saved: outputs/tables/global_profiling.csv
+05:24:53 | INFO | src.analysis.profiling | Saved: outputs/tables/mean_median_profiling.csv
+05:24:53 | INFO | src.analysis.profiling | Saved: outputs/tables/tail_profiling.csv
+05:24:53 | INFO | src.analysis.profiling | Saved: outputs/tables/extreme_profiling.csv
+05:24:53 | INFO | src.analysis.profiling | Saved: outputs/tables/log_profiling.csv
+05:24:53 | INFO | src.analysis.profiling | Saved: outputs/tables/city_profiling.csv
+05:24:54 | INFO | src.analysis.profiling | Saved: outputs/tables/missing_profiling.csv
+05:24:54 | INFO | src.analysis.profiling | Profiling completed
+05:24:54 | INFO | src.analysis.temporal | Starting temporal analysis
+05:24:54 | INFO | src.analysis.temporal | Aggregating data to daily and monthly levels
+05:24:56 | INFO | src.analysis.temporal | Computing rolling trend and volatility
+05:24:58 | INFO | src.analysis.temporal | Analyzing diurnal (hourly) patterns
+05:24:58 | INFO | src.analysis.temporal | Analyzing seasonal trends
+05:24:59 | INFO | src.analysis.temporal | Computing lag correlation
+05:24:59 | INFO | src.analysis.temporal | Detecting volatility regimes
+05:25:00 | INFO | src.analysis.temporal | Saved: outputs/tables/daily_temporal.csv
+05:25:00 | INFO | src.analysis.temporal | Saved: outputs/tables/monthly_temporal.csv
+05:25:00 | INFO | src.analysis.temporal | Saved: outputs/tables/diurnal_temporal.csv
+05:25:00 | INFO | src.analysis.temporal | Saved: outputs/tables/seasonal_temporal.csv
+05:25:00 | INFO | src.analysis.temporal | Saved: outputs/tables/lag_temporal.csv
+05:25:10 | INFO | src.analysis.temporal | Saved: outputs/tables/volatility_temporal.csv
+05:25:10 | INFO | src.analysis.temporal | Temporal analysis completed
+05:25:10 | INFO | src.analysis.interactions | Starting interaction analysis
+05:25:10 | INFO | src.analysis.interactions | Analyzing Wind × Season interaction
+05:25:11 | INFO | src.analysis.interactions | Analyzing Humidity × Season interaction
+05:25:11 | INFO | src.analysis.interactions | Analyzing Wind × Humidity interaction
+05:25:11 | INFO | src.analysis.interactions | Analyzing Event × Season interaction
+05:25:11 | INFO | src.analysis.interactions | Computing conditional probability of severe pollution
+05:25:12 | INFO | src.analysis.interactions | Evaluating interaction strength
+05:25:13 | INFO | src.analysis.interactions | Analyzing city-level interaction effects
+05:25:13 | INFO | src.analysis.interactions | Saved: outputs/tables/wind_season_interaction.csv
+05:25:13 | INFO | src.analysis.interactions | Saved: outputs/tables/humidity_season_interaction.csv
+05:25:13 | INFO | src.analysis.interactions | Saved: outputs/tables/wind_humidity_interaction.csv
+05:25:13 | INFO | src.analysis.interactions | Saved: outputs/tables/event_season_interaction.csv
+05:25:13 | INFO | src.analysis.interactions | Saved: outputs/tables/severe_prob_interaction.csv
+05:25:13 | INFO | src.analysis.interactions | Saved: outputs/tables/strength_interaction.csv
+05:25:13 | INFO | src.analysis.interactions | Saved: outputs/tables/city_interaction_interaction.csv
+05:25:13 | INFO | src.analysis.interactions | Interaction analysis completed
+05:25:13 | INFO | src.analysis.events | Starting event analysis
+05:25:13 | INFO | src.analysis.events | Computing rolling baseline
+05:25:15 | INFO | src.analysis.events | Analyzing festival impact
+05:25:16 | INFO | src.analysis.events | Analyzing crop burning impact
+05:25:16 | INFO | src.analysis.events | Calculating event amplification factor
+05:25:28 | INFO | src.analysis.events | Analyzing severity during events
+05:25:28 | INFO | src.analysis.events | Saved: outputs/tables/festival_events.csv
+05:25:29 | INFO | src.analysis.events | Saved: outputs/tables/crop_events.csv
+05:25:29 | INFO | src.analysis.events | Saved: outputs/tables/amplification_events.csv
+05:25:29 | INFO | src.analysis.events | Saved: outputs/tables/severity_events.csv
+05:25:29 | INFO | src.analysis.events | Event analysis completed
+05:25:29 | INFO | src.analysis.extremes | Starting extreme event analysis
+05:25:29 | INFO | src.analysis.extremes | Analyzing conditions during extreme events
+05:25:29 | INFO | src.analysis.extremes | Extracting extreme pollution events
+05:25:29 | INFO | src.analysis.extremes | Analyzing extreme event distribution
+05:25:29 | INFO | src.analysis.extremes | Extracting extreme pollution events
+05:25:29 | INFO | src.analysis.extremes | Computing probability of extreme events
+05:25:29 | INFO | src.analysis.extremes | Saved: outputs/tables/conditions_extremes.csv
+05:25:29 | INFO | src.analysis.extremes | Saved: outputs/tables/distribution_extremes.csv
+05:25:29 | INFO | src.analysis.extremes | Saved: outputs/tables/probability_extremes.csv
+05:25:29 | INFO | src.analysis.extremes | Extreme analysis completed
+05:25:29 | INFO | src.analysis.synthesis | Building all Tableau datasets
+05:25:29 | INFO | src.analysis.synthesis | Building overview dataset
+05:25:29 | INFO | src.analysis.synthesis | Building temporal dataset
+05:25:33 | INFO | src.analysis.synthesis | Building city comparison dataset
+05:25:34 | INFO | src.analysis.synthesis | Building interaction dataset
+05:25:35 | INFO | src.analysis.synthesis | Building event dataset
+05:25:57 | INFO | src.analysis.synthesis | Building extreme dataset
+05:25:57 | INFO | src.analysis.synthesis | Saved: outputs/Tables/Tableau/overview_dashboard.csv
+05:25:57 | INFO | src.analysis.synthesis | Saved: outputs/Tables/Tableau/temporal_dashboard.csv
+05:25:57 | INFO | src.analysis.synthesis | Saved: outputs/Tables/Tableau/city_dashboard.csv
+05:25:57 | INFO | src.analysis.synthesis | Saved: outputs/Tables/Tableau/interaction_dashboard.csv
+05:25:57 | INFO | src.analysis.synthesis | Saved: outputs/Tables/Tableau/events_dashboard.csv
+05:25:57 | INFO | src.analysis.synthesis | Saved: outputs/Tables/Tableau/extremes_dashboard.csv
+05:25:57 | INFO | src.analysis.synthesis | All datasets ready for Tableau
+05:26:04 | INFO | src.analysis.visualization | Starting visualization module
+05:26:04 | INFO | src.analysis.visualization | Running univariate analysis
+05:26:06 | INFO | src.analysis.visualization | Plotting log distribution
+05:26:07 | INFO | src.analysis.visualization | Plotting wind vs PM2.5
+05:26:08 | INFO | src.analysis.visualization | Plotting humidity vs PM2.5
+05:26:10 | INFO | src.analysis.visualization | Generating correlation heatmap
+05:26:10 | INFO | src.analysis.visualization | Plotting seasonal boxplot
+05:26:11 | INFO | src.analysis.visualization | Visualization completed
+05:26:11 | INFO | src.pipelines.eda_pipeline | Analysis steps executed: profiling, temporal, interactions, events, extremes, visual
+05:26:11 | INFO | src.pipelines.eda_pipeline | EDA pipeline completed
+13:36:17 | INFO | src.utils.logger | Logger initialized (file + Rich console)
+13:36:17 | INFO | src.pipelines.eda_pipeline | Starting EDA pipeline (analysis stage=full)
+13:36:17 | INFO | src.pipelines.eda_pipeline | Shared preprocessing always runs: load → validate → clean → feature engineering
+13:36:17 | INFO | src.ingestion.loader | Loading data from data/raw/INDIA_AQI_COMPLETE_20251126.csv
+13:36:21 | INFO | src.ingestion.loader | Data loaded successfully | Shape: (842160, 71)
+13:36:21 | INFO | src.ingestion.loader | Datetime parsing successful
+13:36:21 | INFO | src.preprocessing.validation | Validating schema
+13:36:21 | INFO | src.preprocessing.validation | Schema validation passed
+13:36:21 | INFO | src.preprocessing.validation | Validating data ranges
+13:36:21 | INFO | src.preprocessing.validation | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+13:36:21 | INFO | src.preprocessing.validation | Checking duplicate records
+13:36:23 | INFO | src.preprocessing.validation | Duplicate rows: 0
+13:36:23 | INFO | src.preprocessing.cleaning | Starting data cleaning
+13:36:25 | INFO | src.preprocessing.cleaning | Removed duplicates: 0
+13:36:25 | INFO | src.preprocessing.cleaning | Final dataset shape: (842160, 71)
+13:36:25 | INFO | src.preprocessing.cleaning | Rows removed: 0
+13:36:25 | INFO | src.preprocessing.feature_engineering | Starting feature engineering
+13:36:25 | INFO | src.preprocessing.feature_engineering | Adding time-based features
+13:36:25 | INFO | src.preprocessing.feature_engineering | Adding lag features
+13:36:26 | INFO | src.preprocessing.feature_engineering | Adding rolling features
+13:36:26 | INFO | src.preprocessing.feature_engineering | Calculating deviation from baseline
+13:36:26 | INFO | src.preprocessing.feature_engineering | Adding severity categories
+13:36:26 | INFO | src.preprocessing.feature_engineering | Adding weather interaction flags
+13:36:26 | INFO | src.preprocessing.feature_engineering | Adding event flags
+13:36:26 | INFO | src.preprocessing.feature_engineering | Feature engineering completed
+13:36:26 | INFO | src.analysis.profiling | Starting profiling analysis
+13:36:26 | INFO | src.analysis.profiling | Running global distribution profiling
+13:36:26 | INFO | src.analysis.profiling | Global stats: {'mean': np.float64(34.73964246698964), 'median': np.float64(25.9), 'std': np.float64(30.84349611479471), 'skewness': np.float64(2.5428533421546824), 'kurtosis': np.float64(10.50788591117613), 'min': np.float64(0.1), 'max': np.float64(581.1), 'p95': np.float64(93.8), 'p99': np.float64(155.1)}
+13:36:26 | INFO | src.analysis.profiling | Calculating mean-median divergence
+13:36:26 | INFO | src.analysis.profiling | Mean-Median Gap: {'mean': np.float64(34.73964246698964), 'median': np.float64(25.9), 'gap': np.float64(8.839642466989645), 'gap_ratio': np.float64(0.25445404268018196)}
+13:36:26 | INFO | src.analysis.profiling | Analyzing tail risk
+13:36:26 | INFO | src.analysis.profiling | Tail risk stats: {'total_records': 842160, 'severe_count': np.int64(740), 'severe_percentage': np.float64(0.0008786928849624775)}
+13:36:26 | INFO | src.analysis.profiling | Calculating contribution of extreme values
+13:36:26 | INFO | src.analysis.profiling | Extreme contribution: {'p95_threshold': np.float64(93.8), 'extreme_contribution_ratio': np.float64(0.18846409389735877)}
+13:36:26 | INFO | src.analysis.profiling | Applying log transformation
+13:36:26 | INFO | src.analysis.profiling | Log distribution stats: {'log_mean': np.float64(3.2743357270434386), 'log_std': np.float64(0.7924186122899202), 'log_skew': np.float64(-0.1594869975577457)}
+13:36:26 | INFO | src.analysis.profiling | Profiling distribution per city
+13:36:26 | INFO | src.analysis.profiling | Analyzing missing values
+13:36:27 | INFO | src.analysis.profiling | Saved: outputs/tables/global_profiling.csv
+13:36:27 | INFO | src.analysis.profiling | Saved: outputs/tables/mean_median_profiling.csv
+13:36:27 | INFO | src.analysis.profiling | Saved: outputs/tables/tail_profiling.csv
+13:36:27 | INFO | src.analysis.profiling | Saved: outputs/tables/extreme_profiling.csv
+13:36:27 | INFO | src.analysis.profiling | Saved: outputs/tables/log_profiling.csv
+13:36:27 | INFO | src.analysis.profiling | Saved: outputs/tables/city_profiling.csv
+13:36:27 | INFO | src.analysis.profiling | Saved: outputs/tables/missing_profiling.csv
+13:36:27 | INFO | src.analysis.profiling | Profiling completed
+13:36:27 | INFO | src.analysis.temporal | Starting temporal analysis
+13:36:27 | INFO | src.analysis.temporal | Aggregating data to daily and monthly levels
+13:36:28 | INFO | src.analysis.temporal | Computing rolling trend and volatility
+13:36:28 | INFO | src.analysis.temporal | Analyzing diurnal (hourly) patterns
+13:36:28 | INFO | src.analysis.temporal | Analyzing seasonal trends
+13:36:28 | INFO | src.analysis.temporal | Computing lag correlation
+13:36:28 | INFO | src.analysis.temporal | Detecting volatility regimes
+13:36:29 | INFO | src.analysis.temporal | Saved: outputs/tables/daily_temporal.csv
+13:36:29 | INFO | src.analysis.temporal | Saved: outputs/tables/monthly_temporal.csv
+13:36:29 | INFO | src.analysis.temporal | Saved: outputs/tables/diurnal_temporal.csv
+13:36:29 | INFO | src.analysis.temporal | Saved: outputs/tables/seasonal_temporal.csv
+13:36:29 | INFO | src.analysis.temporal | Saved: outputs/tables/lag_temporal.csv
+13:36:30 | INFO | src.analysis.temporal | Saved: outputs/tables/volatility_temporal.csv
+13:36:30 | INFO | src.analysis.temporal | Temporal analysis completed
+13:36:30 | INFO | src.analysis.interactions | Starting interaction analysis
+13:36:30 | INFO | src.analysis.interactions | Analyzing Wind × Season interaction
+13:36:31 | INFO | src.analysis.interactions | Analyzing Humidity × Season interaction
+13:36:31 | INFO | src.analysis.interactions | Analyzing Wind × Humidity interaction
+13:36:31 | INFO | src.analysis.interactions | Analyzing Event × Season interaction
+13:36:31 | INFO | src.analysis.interactions | Computing conditional probability of severe pollution
+13:36:31 | INFO | src.analysis.interactions | Evaluating interaction strength
+13:36:31 | INFO | src.analysis.interactions | Analyzing city-level interaction effects
+13:36:31 | INFO | src.analysis.interactions | Saved: outputs/tables/wind_season_interaction.csv
+13:36:31 | INFO | src.analysis.interactions | Saved: outputs/tables/humidity_season_interaction.csv
+13:36:31 | INFO | src.analysis.interactions | Saved: outputs/tables/wind_humidity_interaction.csv
+13:36:31 | INFO | src.analysis.interactions | Saved: outputs/tables/event_season_interaction.csv
+13:36:31 | INFO | src.analysis.interactions | Saved: outputs/tables/severe_prob_interaction.csv
+13:36:31 | INFO | src.analysis.interactions | Saved: outputs/tables/strength_interaction.csv
+13:36:31 | INFO | src.analysis.interactions | Saved: outputs/tables/city_interaction_interaction.csv
+13:36:31 | INFO | src.analysis.interactions | Interaction analysis completed
+13:36:31 | INFO | src.analysis.events | Starting event analysis
+13:36:31 | INFO | src.analysis.events | Computing rolling baseline
+13:36:31 | INFO | src.analysis.events | Analyzing festival impact
+13:36:31 | INFO | src.analysis.events | Analyzing crop burning impact
+13:36:31 | INFO | src.analysis.events | Calculating event amplification factor
+13:36:33 | INFO | src.analysis.events | Analyzing severity during events
+13:36:33 | INFO | src.analysis.events | Saved: outputs/tables/festival_events.csv
+13:36:33 | INFO | src.analysis.events | Saved: outputs/tables/crop_events.csv
+13:36:33 | INFO | src.analysis.events | Saved: outputs/tables/amplification_events.csv
+13:36:33 | INFO | src.analysis.events | Saved: outputs/tables/severity_events.csv
+13:36:33 | INFO | src.analysis.events | Event analysis completed
+13:36:33 | INFO | src.analysis.extremes | Starting extreme event analysis
+13:36:33 | INFO | src.analysis.extremes | Analyzing conditions during extreme events
+13:36:33 | INFO | src.analysis.extremes | Extracting extreme pollution events
+13:36:33 | INFO | src.analysis.extremes | Analyzing extreme event distribution
+13:36:33 | INFO | src.analysis.extremes | Extracting extreme pollution events
+13:36:33 | INFO | src.analysis.extremes | Computing probability of extreme events
+13:36:34 | INFO | src.analysis.extremes | Saved: outputs/tables/conditions_extremes.csv
+13:36:34 | INFO | src.analysis.extremes | Saved: outputs/tables/distribution_extremes.csv
+13:36:34 | INFO | src.analysis.extremes | Saved: outputs/tables/probability_extremes.csv
+13:36:34 | INFO | src.analysis.extremes | Extreme analysis completed
+13:36:34 | INFO | src.analysis.synthesis | Building all Tableau datasets
+13:36:34 | INFO | src.analysis.synthesis | Building overview dataset
+13:36:34 | INFO | src.analysis.synthesis | Building temporal dataset
+13:36:35 | INFO | src.analysis.synthesis | Building city comparison dataset
+13:36:35 | INFO | src.analysis.synthesis | Building interaction dataset
+13:36:35 | INFO | src.analysis.synthesis | Building event dataset
+13:36:47 | INFO | src.analysis.synthesis | Building extreme dataset
+13:36:47 | INFO | src.analysis.synthesis | Saved: outputs/Tables/Tableau/overview_dashboard.csv
+13:36:47 | INFO | src.analysis.synthesis | Saved: outputs/Tables/Tableau/temporal_dashboard.csv
+13:36:47 | INFO | src.analysis.synthesis | Saved: outputs/Tables/Tableau/city_dashboard.csv
+13:36:47 | INFO | src.analysis.synthesis | Saved: outputs/Tables/Tableau/interaction_dashboard.csv
+13:36:47 | INFO | src.analysis.synthesis | Saved: outputs/Tables/Tableau/events_dashboard.csv
+13:36:47 | INFO | src.analysis.synthesis | Saved: outputs/Tables/Tableau/extremes_dashboard.csv
+13:36:47 | INFO | src.analysis.synthesis | All datasets ready for Tableau
+13:36:51 | INFO | src.analysis.visualization | Starting visualization module
+13:36:51 | INFO | src.analysis.visualization | Running univariate analysis
+13:36:53 | INFO | src.analysis.visualization | Plotting log distribution
+13:36:54 | INFO | src.analysis.visualization | Plotting wind vs PM2.5
+13:36:55 | INFO | src.analysis.visualization | Plotting humidity vs PM2.5
+13:36:56 | INFO | src.analysis.visualization | Generating correlation heatmap
+13:36:56 | INFO | src.analysis.visualization | Plotting seasonal boxplot
+13:36:57 | INFO | src.analysis.visualization | Visualization completed
+13:36:57 | INFO | src.pipelines.eda_pipeline | Analysis steps executed: profiling, temporal, interactions, events, extremes, visual
+13:36:57 | INFO | src.pipelines.eda_pipeline | EDA pipeline completed
+13:56:39 | INFO | src.utils.logger | Logger initialized (file + Rich console)
+13:56:47 | INFO | src.prediction.loader | Loaded 29040 city rows (scanned 842160 raw rows) from chunks
+13:56:47 | INFO | src.preprocessing.validation | Validating schema
+13:56:47 | INFO | src.preprocessing.validation | Schema validation passed
+13:56:48 | INFO | src.preprocessing.validation | Validating data ranges
+13:56:48 | INFO | src.preprocessing.validation | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+13:56:48 | INFO | src.preprocessing.validation | Checking duplicate records
+13:56:48 | INFO | src.preprocessing.validation | Duplicate rows: 0
+13:56:48 | INFO | src.preprocessing.cleaning | Starting data cleaning
+13:56:48 | INFO | src.preprocessing.cleaning | Removed duplicates: 0
+13:56:48 | INFO | src.preprocessing.cleaning | Final dataset shape: (29040, 8)
+13:56:48 | INFO | src.preprocessing.cleaning | Rows removed: 0
+13:56:48 | INFO | src.preprocessing.feature_engineering | Starting feature engineering
+13:56:48 | INFO | src.preprocessing.feature_engineering | Adding time-based features
+13:56:48 | INFO | src.preprocessing.feature_engineering | Adding lag features
+13:56:48 | INFO | src.preprocessing.feature_engineering | Adding rolling features
+13:56:48 | INFO | src.preprocessing.feature_engineering | Calculating deviation from baseline
+13:56:48 | INFO | src.preprocessing.feature_engineering | Adding severity categories
+13:56:48 | INFO | src.preprocessing.feature_engineering | Adding weather interaction flags
+13:56:48 | INFO | src.preprocessing.feature_engineering | Adding event flags
+13:56:48 | INFO | src.preprocessing.feature_engineering | Feature engineering completed
+13:56:53 | INFO | src.analysis.forecasting | Horizon 1h | train 23063 / test 5807 | test R²=0.8318 | test MAE=10.350 | test RMSE=14.388
+13:56:58 | INFO | src.analysis.forecasting | Horizon 6h | train 23058 / test 5802 | test R²=0.4168 | test MAE=19.862 | test RMSE=26.786
+13:57:02 | INFO | src.analysis.forecasting | Horizon 12h | train 23052 / test 5796 | test R²=0.3684 | test MAE=20.888 | test RMSE=27.885
+13:57:07 | INFO | src.analysis.forecasting | Horizon 24h | train 23040 / test 5784 | test R²=0.5041 | test MAE=17.813 | test RMSE=24.701
+13:57:12 | INFO | src.analysis.forecasting | Horizon 48h | train 23016 / test 5760 | test R²=0.3667 | test MAE=20.615 | test RMSE=27.951
+14:28:09 | INFO | src.utils.logger | Logger initialized (file + Rich console)
+14:28:11 | INFO | src.prediction.loader | Loaded 29040 city rows (scanned 842160 raw rows) from chunks
+14:28:11 | INFO | src.preprocessing.validation | Validating schema
+14:28:11 | INFO | src.preprocessing.validation | Schema validation passed
+14:28:11 | INFO | src.preprocessing.validation | Validating data ranges
+14:28:11 | INFO | src.preprocessing.validation | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+14:28:11 | INFO | src.preprocessing.validation | Checking duplicate records
+14:28:11 | INFO | src.preprocessing.validation | Duplicate rows: 0
+14:28:11 | INFO | src.preprocessing.cleaning | Starting data cleaning
+14:28:11 | INFO | src.preprocessing.cleaning | Removed duplicates: 0
+14:28:11 | INFO | src.preprocessing.cleaning | Final dataset shape: (29040, 8)
+14:28:11 | INFO | src.preprocessing.cleaning | Rows removed: 0
+14:28:11 | INFO | src.preprocessing.feature_engineering | Starting feature engineering
+14:28:11 | INFO | src.preprocessing.feature_engineering | Adding time-based features
+14:28:11 | INFO | src.preprocessing.feature_engineering | Adding lag features
+14:28:11 | INFO | src.preprocessing.feature_engineering | Adding rolling features
+14:28:11 | INFO | src.preprocessing.feature_engineering | Calculating deviation from baseline
+14:28:11 | INFO | src.preprocessing.feature_engineering | Adding severity categories
+14:28:11 | INFO | src.preprocessing.feature_engineering | Adding weather interaction flags
+14:28:11 | INFO | src.preprocessing.feature_engineering | Adding event flags
+14:28:11 | INFO | src.preprocessing.feature_engineering | Feature engineering completed
+14:28:13 | INFO | src.analysis.forecasting | Horizon 1h | train 23063 / test 5807 | test R²=0.8318 | test MAE=10.350 | test RMSE=14.388
+14:28:15 | INFO | src.analysis.forecasting | Horizon 6h | train 23058 / test 5802 | test R²=0.4168 | test MAE=19.862 | test RMSE=26.786
+14:28:17 | INFO | src.analysis.forecasting | Horizon 12h | train 23052 / test 5796 | test R²=0.3684 | test MAE=20.888 | test RMSE=27.885
+14:28:19 | INFO | src.analysis.forecasting | Horizon 24h | train 23040 / test 5784 | test R²=0.5041 | test MAE=17.813 | test RMSE=24.701
+14:28:21 | INFO | src.analysis.forecasting | Horizon 48h | train 23016 / test 5760 | test R²=0.3667 | test MAE=20.615 | test RMSE=27.951
+21:16:35 | INFO | src.utils.logger | Logger initialized (file + Rich console)
+21:16:38 | INFO | src.prediction.loader | Loaded 29040 city rows (scanned 842160 raw rows) from chunks
+21:16:38 | INFO | src.preprocessing.validation | Validating schema
+21:16:38 | INFO | src.preprocessing.validation | Schema validation passed
+21:16:38 | INFO | src.preprocessing.validation | Validating data ranges
+21:16:38 | INFO | src.preprocessing.validation | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+21:16:38 | INFO | src.preprocessing.validation | Checking duplicate records
+21:16:38 | INFO | src.preprocessing.validation | Duplicate rows: 0
+21:16:38 | INFO | src.preprocessing.cleaning | Starting data cleaning
+21:16:38 | INFO | src.preprocessing.cleaning | Removed duplicates: 0
+21:16:38 | INFO | src.preprocessing.cleaning | Final dataset shape: (29040, 8)
+21:16:38 | INFO | src.preprocessing.cleaning | Rows removed: 0
+21:16:38 | INFO | src.preprocessing.feature_engineering | Starting feature engineering
+21:16:38 | INFO | src.preprocessing.feature_engineering | Adding time-based features
+21:16:38 | INFO | src.preprocessing.feature_engineering | Adding lag features
+21:16:38 | INFO | src.preprocessing.feature_engineering | Adding rolling features
+21:16:38 | INFO | src.preprocessing.feature_engineering | Calculating deviation from baseline
+21:16:38 | INFO | src.preprocessing.feature_engineering | Adding severity categories
+21:16:38 | INFO | src.preprocessing.feature_engineering | Adding weather interaction flags
+21:16:38 | INFO | src.preprocessing.feature_engineering | Adding event flags
+21:16:38 | INFO | src.preprocessing.feature_engineering | Feature engineering completed
+21:16:40 | INFO | src.analysis.forecasting | Horizon 1h | train 23063 / test 5807 | test R²=0.8318 | test MAE=10.350 | test RMSE=14.388
+21:16:43 | INFO | src.analysis.forecasting | Horizon 6h | train 23058 / test 5802 | test R²=0.4168 | test MAE=19.862 | test RMSE=26.786
+21:16:45 | INFO | src.analysis.forecasting | Horizon 12h | train 23052 / test 5796 | test R²=0.3684 | test MAE=20.888 | test RMSE=27.885
+21:16:47 | INFO | src.analysis.forecasting | Horizon 24h | train 23040 / test 5784 | test R²=0.5041 | test MAE=17.813 | test RMSE=24.701
+21:16:50 | INFO | src.analysis.forecasting | Horizon 48h | train 23016 / test 5760 | test R²=0.3667 | test MAE=20.615 | test RMSE=27.951
+21:17:18 | INFO | src.utils.logger | Logger initialized (file + Rich console)
+21:17:18 | INFO | src.pipelines.eda_pipeline | Starting EDA pipeline (analysis stage=full)
+21:17:18 | INFO | src.pipelines.eda_pipeline | Shared preprocessing always runs: load → validate → clean → feature engineering
+21:17:18 | INFO | src.ingestion.loader | Loading data from data/raw/INDIA_AQI_COMPLETE_20251126.csv
+21:17:21 | INFO | src.ingestion.loader | Data loaded successfully | Shape: (842160, 71)
+21:17:21 | INFO | src.ingestion.loader | Datetime parsing successful
+21:17:21 | INFO | src.preprocessing.validation | Validating schema
+21:17:21 | INFO | src.preprocessing.validation | Schema validation passed
+21:17:21 | INFO | src.preprocessing.validation | Validating data ranges
+21:17:21 | INFO | src.preprocessing.validation | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+21:17:21 | INFO | src.preprocessing.validation | Checking duplicate records
+21:17:22 | INFO | src.preprocessing.validation | Duplicate rows: 0
+21:17:22 | INFO | src.preprocessing.cleaning | Starting data cleaning
+21:17:23 | INFO | src.preprocessing.cleaning | Removed duplicates: 0
+21:17:24 | INFO | src.preprocessing.cleaning | Final dataset shape: (842160, 71)
+21:17:24 | INFO | src.preprocessing.cleaning | Rows removed: 0
+21:17:24 | INFO | src.preprocessing.feature_engineering | Starting feature engineering
+21:17:24 | INFO | src.preprocessing.feature_engineering | Adding time-based features
+21:17:24 | INFO | src.preprocessing.feature_engineering | Adding lag features
+21:17:24 | INFO | src.preprocessing.feature_engineering | Adding rolling features
+21:17:24 | INFO | src.preprocessing.feature_engineering | Calculating deviation from baseline
+21:17:24 | INFO | src.preprocessing.feature_engineering | Adding severity categories
+21:17:24 | INFO | src.preprocessing.feature_engineering | Adding weather interaction flags
+21:17:24 | INFO | src.preprocessing.feature_engineering | Adding event flags
+21:17:24 | INFO | src.preprocessing.feature_engineering | Feature engineering completed
+21:17:24 | INFO | src.analysis.profiling | Starting profiling analysis
+21:17:24 | INFO | src.analysis.profiling | Running global distribution profiling
+21:17:24 | INFO | src.analysis.profiling | Global stats: {'mean': np.float64(34.73964246698964), 'median': np.float64(25.9), 'std': np.float64(30.84349611479471), 'skewness': np.float64(2.5428533421546824), 'kurtosis': np.float64(10.50788591117613), 'min': np.float64(0.1), 'max': np.float64(581.1), 'p95': np.float64(93.8), 'p99': np.float64(155.1)}
+21:17:24 | INFO | src.analysis.profiling | Calculating mean-median divergence
+21:17:24 | INFO | src.analysis.profiling | Mean-Median Gap: {'mean': np.float64(34.73964246698964), 'median': np.float64(25.9), 'gap': np.float64(8.839642466989645), 'gap_ratio': np.float64(0.25445404268018196)}
+21:17:24 | INFO | src.analysis.profiling | Analyzing tail risk
+21:17:24 | INFO | src.analysis.profiling | Tail risk stats: {'total_records': 842160, 'severe_count': np.int64(740), 'severe_percentage': np.float64(0.0008786928849624775)}
+21:17:24 | INFO | src.analysis.profiling | Calculating contribution of extreme values
+21:17:24 | INFO | src.analysis.profiling | Extreme contribution: {'p95_threshold': np.float64(93.8), 'extreme_contribution_ratio': np.float64(0.18846409389735877)}
+21:17:24 | INFO | src.analysis.profiling | Applying log transformation
+21:17:24 | INFO | src.analysis.profiling | Log distribution stats: {'log_mean': np.float64(3.2743357270434386), 'log_std': np.float64(0.7924186122899202), 'log_skew': np.float64(-0.1594869975577457)}
+21:17:24 | INFO | src.analysis.profiling | Profiling distribution per city
+21:17:24 | INFO | src.analysis.profiling | Analyzing missing values
+21:17:25 | INFO | src.analysis.profiling | Saved: outputs/tables/global_profiling.csv
+21:17:25 | INFO | src.analysis.profiling | Saved: outputs/tables/mean_median_profiling.csv
+21:17:25 | INFO | src.analysis.profiling | Saved: outputs/tables/tail_profiling.csv
+21:17:25 | INFO | src.analysis.profiling | Saved: outputs/tables/extreme_profiling.csv
+21:17:25 | INFO | src.analysis.profiling | Saved: outputs/tables/log_profiling.csv
+21:17:25 | INFO | src.analysis.profiling | Saved: outputs/tables/city_profiling.csv
+21:17:25 | INFO | src.analysis.profiling | Saved: outputs/tables/missing_profiling.csv
+21:17:25 | INFO | src.analysis.profiling | Profiling completed
+21:17:25 | INFO | src.analysis.temporal | Starting temporal analysis
+21:17:25 | INFO | src.analysis.temporal | Aggregating data to daily and monthly levels
+21:17:25 | INFO | src.analysis.temporal | Computing rolling trend and volatility
+21:17:25 | INFO | src.analysis.temporal | Analyzing diurnal (hourly) patterns
+21:17:25 | INFO | src.analysis.temporal | Analyzing seasonal trends
+21:17:25 | INFO | src.analysis.temporal | Computing lag correlation
+21:17:25 | INFO | src.analysis.temporal | Detecting volatility regimes
+21:17:25 | INFO | src.analysis.temporal | Saved: outputs/tables/daily_temporal.csv
+21:17:25 | INFO | src.analysis.temporal | Saved: outputs/tables/monthly_temporal.csv
+21:17:25 | INFO | src.analysis.temporal | Saved: outputs/tables/diurnal_temporal.csv
+21:17:25 | INFO | src.analysis.temporal | Saved: outputs/tables/seasonal_temporal.csv
+21:17:25 | INFO | src.analysis.temporal | Saved: outputs/tables/lag_temporal.csv
+21:17:26 | INFO | src.analysis.temporal | Saved: outputs/tables/volatility_temporal.csv
+21:17:26 | INFO | src.analysis.temporal | Temporal analysis completed
+21:17:26 | INFO | src.analysis.interactions | Starting interaction analysis
+21:17:26 | INFO | src.analysis.interactions | Analyzing Wind × Season interaction
+21:17:26 | INFO | src.analysis.interactions | Analyzing Humidity × Season interaction
+21:17:26 | INFO | src.analysis.interactions | Analyzing Wind × Humidity interaction
+21:17:26 | INFO | src.analysis.interactions | Analyzing Event × Season interaction
+21:17:26 | INFO | src.analysis.interactions | Computing conditional probability of severe pollution
+21:17:26 | INFO | src.analysis.interactions | Evaluating interaction strength
+21:17:26 | INFO | src.analysis.interactions | Analyzing city-level interaction effects
+21:17:26 | INFO | src.analysis.interactions | Saved: outputs/tables/wind_season_interaction.csv
+21:17:26 | INFO | src.analysis.interactions | Saved: outputs/tables/humidity_season_interaction.csv
+21:17:26 | INFO | src.analysis.interactions | Saved: outputs/tables/wind_humidity_interaction.csv
+21:17:26 | INFO | src.analysis.interactions | Saved: outputs/tables/event_season_interaction.csv
+21:17:26 | INFO | src.analysis.interactions | Saved: outputs/tables/severe_prob_interaction.csv
+21:17:26 | INFO | src.analysis.interactions | Saved: outputs/tables/strength_interaction.csv
+21:17:26 | INFO | src.analysis.interactions | Saved: outputs/tables/city_interaction_interaction.csv
+21:17:26 | INFO | src.analysis.interactions | Interaction analysis completed
+21:17:26 | INFO | src.analysis.events | Starting event analysis
+21:17:26 | INFO | src.analysis.events | Computing rolling baseline
+21:17:27 | INFO | src.analysis.events | Analyzing festival impact
+21:17:27 | INFO | src.analysis.events | Analyzing crop burning impact
+21:17:27 | INFO | src.analysis.events | Calculating event amplification factor
+21:17:27 | INFO | src.analysis.events | Analyzing severity during events
+21:17:27 | INFO | src.analysis.events | Saved: outputs/tables/festival_events.csv
+21:17:27 | INFO | src.analysis.events | Saved: outputs/tables/crop_events.csv
+21:17:27 | INFO | src.analysis.events | Saved: outputs/tables/amplification_events.csv
+21:17:27 | INFO | src.analysis.events | Saved: outputs/tables/severity_events.csv
+21:17:27 | INFO | src.analysis.events | Event analysis completed
+21:17:27 | INFO | src.analysis.extremes | Starting extreme event analysis
+21:17:27 | INFO | src.analysis.extremes | Analyzing conditions during extreme events
+21:17:27 | INFO | src.analysis.extremes | Extracting extreme pollution events
+21:17:27 | INFO | src.analysis.extremes | Analyzing extreme event distribution
+21:17:28 | INFO | src.analysis.extremes | Extracting extreme pollution events
+21:17:28 | INFO | src.analysis.extremes | Computing probability of extreme events
+21:17:28 | INFO | src.analysis.extremes | Saved: outputs/tables/conditions_extremes.csv
+21:17:28 | INFO | src.analysis.extremes | Saved: outputs/tables/distribution_extremes.csv
+21:17:28 | INFO | src.analysis.extremes | Saved: outputs/tables/probability_extremes.csv
+21:17:28 | INFO | src.analysis.extremes | Extreme analysis completed
+21:17:28 | INFO | src.analysis.synthesis | Building all Tableau datasets
+21:17:28 | INFO | src.analysis.synthesis | Building overview dataset
+21:17:28 | INFO | src.analysis.synthesis | Building temporal dataset
+21:17:28 | INFO | src.analysis.synthesis | Building city comparison dataset
+21:17:28 | INFO | src.analysis.synthesis | Building interaction dataset
+21:17:28 | INFO | src.analysis.synthesis | Building event dataset
+21:17:35 | INFO | src.analysis.synthesis | Building extreme dataset
+21:17:35 | INFO | src.analysis.synthesis | Saved: outputs/Tables/Tableau/overview_dashboard.csv
+21:17:35 | INFO | src.analysis.synthesis | Saved: outputs/Tables/Tableau/temporal_dashboard.csv
+21:17:35 | INFO | src.analysis.synthesis | Saved: outputs/Tables/Tableau/city_dashboard.csv
+21:17:35 | INFO | src.analysis.synthesis | Saved: outputs/Tables/Tableau/interaction_dashboard.csv
+21:17:35 | INFO | src.analysis.synthesis | Saved: outputs/Tables/Tableau/events_dashboard.csv
+21:17:35 | INFO | src.analysis.synthesis | Saved: outputs/Tables/Tableau/extremes_dashboard.csv
+21:17:35 | INFO | src.analysis.synthesis | All datasets ready for Tableau
+21:17:36 | INFO | src.analysis.visualization | Starting visualization module
+21:17:36 | INFO | src.analysis.visualization | Running univariate analysis
+21:17:38 | INFO | src.analysis.visualization | Plotting log distribution
+21:17:38 | INFO | src.analysis.visualization | Plotting wind vs PM2.5
+21:17:39 | INFO | src.analysis.visualization | Plotting humidity vs PM2.5
+21:17:39 | INFO | src.analysis.visualization | Generating correlation heatmap
+21:17:39 | INFO | src.analysis.visualization | Plotting seasonal boxplot
+21:17:40 | INFO | src.analysis.visualization | Visualization completed
+21:17:40 | INFO | src.pipelines.eda_pipeline | Analysis steps executed: profiling, temporal, interactions, events, extremes, visual
+21:17:40 | INFO | src.pipelines.eda_pipeline | EDA pipeline completed
+14:36:26 | INFO | src.utils.logger | Logger initialized (file + Rich console)
+14:36:30 | INFO | src.prediction.loader | Loaded 29040 city rows (scanned 842160 raw rows) from chunks
+14:36:30 | INFO | src.preprocessing.validation | Validating schema
+14:36:30 | INFO | src.preprocessing.validation | Schema validation passed
+14:36:30 | INFO | src.preprocessing.validation | Validating data ranges
+14:36:30 | INFO | src.preprocessing.validation | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+14:36:30 | INFO | src.preprocessing.validation | Checking duplicate records
+14:36:30 | INFO | src.preprocessing.validation | Duplicate rows: 0
+14:36:30 | INFO | src.preprocessing.cleaning | Starting data cleaning
+14:36:30 | INFO | src.preprocessing.cleaning | Removed duplicates: 0
+14:36:30 | INFO | src.preprocessing.cleaning | Final dataset shape: (29040, 8)
+14:36:30 | INFO | src.preprocessing.cleaning | Rows removed: 0
+14:36:30 | INFO | src.preprocessing.feature_engineering | Starting feature engineering
+14:36:30 | INFO | src.preprocessing.feature_engineering | Adding time-based features
+14:36:30 | INFO | src.preprocessing.feature_engineering | Adding lag features
+14:36:30 | INFO | src.preprocessing.feature_engineering | Adding rolling features
+14:36:30 | INFO | src.preprocessing.feature_engineering | Calculating deviation from baseline
+14:36:30 | INFO | src.preprocessing.feature_engineering | Adding severity categories
+14:36:30 | INFO | src.preprocessing.feature_engineering | Adding weather interaction flags
+14:36:30 | INFO | src.preprocessing.feature_engineering | Adding event flags
+14:36:30 | INFO | src.preprocessing.feature_engineering | Feature engineering completed
+14:36:32 | INFO | src.analysis.forecasting | Horizon 1h | train 23063 / test 5807 | test R²=0.8318 | test MAE=10.350 | test RMSE=14.388
+14:36:34 | INFO | src.analysis.forecasting | Horizon 6h | train 23058 / test 5802 | test R²=0.4168 | test MAE=19.862 | test RMSE=26.786
+14:36:36 | INFO | src.analysis.forecasting | Horizon 12h | train 23052 / test 5796 | test R²=0.3684 | test MAE=20.888 | test RMSE=27.885
+14:36:38 | INFO | src.analysis.forecasting | Horizon 24h | train 23040 / test 5784 | test R²=0.5041 | test MAE=17.813 | test RMSE=24.701
+14:36:40 | INFO | src.analysis.forecasting | Horizon 48h | train 23016 / test 5760 | test R²=0.3667 | test MAE=20.615 | test RMSE=27.951
+17:24:50 | INFO | src.utils.logger | Logger initialized (file + Rich console)
+17:24:50 | INFO | src.pipelines.eda_pipeline | Starting EDA pipeline (analysis stage=profiling)
+17:24:50 | INFO | src.pipelines.eda_pipeline | Shared preprocessing always runs: load → validate → clean → feature engineering
+17:24:50 | INFO | src.ingestion.loader | Loading data from data/raw/INDIA_AQI_COMPLETE_20251126.csv
+17:24:54 | INFO | src.ingestion.loader | Data loaded successfully | Shape: (842160, 71)
+17:24:54 | INFO | src.ingestion.loader | Datetime parsing successful
+17:24:54 | INFO | src.preprocessing.validation | Validating schema
+17:24:54 | INFO | src.preprocessing.validation | Schema validation passed
+17:24:54 | INFO | src.preprocessing.validation | Validating data ranges
+17:24:54 | INFO | src.preprocessing.validation | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+17:24:54 | INFO | src.preprocessing.validation | Checking duplicate records
+17:24:57 | INFO | src.preprocessing.validation | Duplicate rows: 0
+17:24:57 | INFO | src.preprocessing.cleaning | Starting data cleaning
+17:24:58 | INFO | src.preprocessing.cleaning | Removed duplicates: 0
+17:24:59 | INFO | src.preprocessing.cleaning | Final dataset shape: (842160, 71)
+17:24:59 | INFO | src.preprocessing.cleaning | Rows removed: 0
+17:24:59 | INFO | src.preprocessing.feature_engineering | Starting feature engineering
+17:24:59 | INFO | src.preprocessing.feature_engineering | Adding time-based features
+17:24:59 | INFO | src.preprocessing.feature_engineering | Adding lag features
+17:24:59 | INFO | src.preprocessing.feature_engineering | Adding rolling features
+17:24:59 | INFO | src.preprocessing.feature_engineering | Calculating deviation from baseline
+17:24:59 | INFO | src.preprocessing.feature_engineering | Adding severity categories
+17:24:59 | INFO | src.preprocessing.feature_engineering | Adding weather interaction flags
+17:24:59 | INFO | src.preprocessing.feature_engineering | Adding event flags
+17:24:59 | INFO | src.preprocessing.feature_engineering | Feature engineering completed
+17:24:59 | INFO | src.analysis.profiling | Starting profiling analysis
+17:24:59 | INFO | src.analysis.profiling | Running global distribution profiling
+17:24:59 | INFO | src.analysis.profiling | Global stats: {'mean': np.float64(34.73964246698964), 'median': np.float64(25.9), 'std': np.float64(30.84349611479471), 'skewness': np.float64(2.5428533421546824), 'kurtosis': np.float64(10.50788591117613), 'min': np.float64(0.1), 'max': np.float64(581.1), 'p95': np.float64(93.8), 'p99': np.float64(155.1)}
+17:24:59 | INFO | src.analysis.profiling | Calculating mean-median divergence
+17:24:59 | INFO | src.analysis.profiling | Mean-Median Gap: {'mean': np.float64(34.73964246698964), 'median': np.float64(25.9), 'gap': np.float64(8.839642466989645), 'gap_ratio': np.float64(0.25445404268018196)}
+17:24:59 | INFO | src.analysis.profiling | Analyzing tail risk
+17:24:59 | INFO | src.analysis.profiling | Tail risk stats: {'total_records': 842160, 'severe_count': np.int64(740), 'severe_percentage': np.float64(0.0008786928849624775)}
+17:24:59 | INFO | src.analysis.profiling | Calculating contribution of extreme values
+17:24:59 | INFO | src.analysis.profiling | Extreme contribution: {'p95_threshold': np.float64(93.8), 'extreme_contribution_ratio': np.float64(0.18846409389735877)}
+17:24:59 | INFO | src.analysis.profiling | Applying log transformation
+17:24:59 | INFO | src.analysis.profiling | Log distribution stats: {'log_mean': np.float64(3.2743357270434386), 'log_std': np.float64(0.7924186122899202), 'log_skew': np.float64(-0.1594869975577457)}
+17:24:59 | INFO | src.analysis.profiling | Profiling distribution per city
+17:24:59 | INFO | src.analysis.profiling | Analyzing missing values
+17:25:00 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/global_profiling.csv
+17:25:00 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/mean_median_profiling.csv
+17:25:00 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/tail_profiling.csv
+17:25:00 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/extreme_profiling.csv
+17:25:00 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/log_profiling.csv
+17:25:00 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/city_profiling.csv
+17:25:00 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/missing_profiling.csv
+17:25:00 | INFO | src.analysis.profiling | Profiling completed
+17:25:00 | INFO | src.pipelines.eda_pipeline | Analysis steps executed: profiling
+17:25:00 | INFO | src.pipelines.eda_pipeline | EDA pipeline completed
+17:25:10 | INFO | src.utils.logger | Logger initialized (file + Rich console)
+17:25:10 | INFO | src.pipelines.eda_pipeline | Starting EDA pipeline (analysis stage=profiling)
+17:25:10 | INFO | src.pipelines.eda_pipeline | Shared preprocessing always runs: load → validate → clean → feature engineering
+17:25:10 | INFO | src.ingestion.loader | Loading data from data/raw/INDIA_AQI_COMPLETE_20251126.csv
+17:25:14 | INFO | src.ingestion.loader | Data loaded successfully | Shape: (842160, 71)
+17:25:14 | INFO | src.ingestion.loader | Datetime parsing successful
+17:25:14 | INFO | src.preprocessing.validation | Validating schema
+17:25:14 | INFO | src.preprocessing.validation | Schema validation passed
+17:25:14 | INFO | src.preprocessing.validation | Validating data ranges
+17:25:14 | INFO | src.preprocessing.validation | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+17:25:14 | INFO | src.preprocessing.validation | Checking duplicate records
+17:25:16 | INFO | src.preprocessing.validation | Duplicate rows: 0
+17:25:16 | INFO | src.preprocessing.cleaning | Starting data cleaning
+17:25:17 | INFO | src.preprocessing.cleaning | Removed duplicates: 0
+17:25:17 | INFO | src.preprocessing.cleaning | Final dataset shape: (842160, 71)
+17:25:17 | INFO | src.preprocessing.cleaning | Rows removed: 0
+17:25:17 | INFO | src.preprocessing.feature_engineering | Starting feature engineering
+17:25:17 | INFO | src.preprocessing.feature_engineering | Adding time-based features
+17:25:17 | INFO | src.preprocessing.feature_engineering | Adding lag features
+17:25:17 | INFO | src.preprocessing.feature_engineering | Adding rolling features
+17:25:17 | INFO | src.preprocessing.feature_engineering | Calculating deviation from baseline
+17:25:17 | INFO | src.preprocessing.feature_engineering | Adding severity categories
+17:25:17 | INFO | src.preprocessing.feature_engineering | Adding weather interaction flags
+17:25:17 | INFO | src.preprocessing.feature_engineering | Adding event flags
+17:25:17 | INFO | src.preprocessing.feature_engineering | Feature engineering completed
+17:25:17 | INFO | src.analysis.profiling | Starting profiling analysis
+17:25:17 | INFO | src.analysis.profiling | Running global distribution profiling
+17:25:17 | INFO | src.analysis.profiling | Global stats: {'mean': np.float64(34.73964246698964), 'median': np.float64(25.9), 'std': np.float64(30.84349611479471), 'skewness': np.float64(2.5428533421546824), 'kurtosis': np.float64(10.50788591117613), 'min': np.float64(0.1), 'max': np.float64(581.1), 'p95': np.float64(93.8), 'p99': np.float64(155.1)}
+17:25:17 | INFO | src.analysis.profiling | Calculating mean-median divergence
+17:25:17 | INFO | src.analysis.profiling | Mean-Median Gap: {'mean': np.float64(34.73964246698964), 'median': np.float64(25.9), 'gap': np.float64(8.839642466989645), 'gap_ratio': np.float64(0.25445404268018196)}
+17:25:17 | INFO | src.analysis.profiling | Analyzing tail risk
+17:25:17 | INFO | src.analysis.profiling | Tail risk stats: {'total_records': 842160, 'severe_count': np.int64(740), 'severe_percentage': np.float64(0.0008786928849624775)}
+17:25:17 | INFO | src.analysis.profiling | Calculating contribution of extreme values
+17:25:17 | INFO | src.analysis.profiling | Extreme contribution: {'p95_threshold': np.float64(93.8), 'extreme_contribution_ratio': np.float64(0.18846409389735877)}
+17:25:17 | INFO | src.analysis.profiling | Applying log transformation
+17:25:17 | INFO | src.analysis.profiling | Log distribution stats: {'log_mean': np.float64(3.2743357270434386), 'log_std': np.float64(0.7924186122899202), 'log_skew': np.float64(-0.1594869975577457)}
+17:25:17 | INFO | src.analysis.profiling | Profiling distribution per city
+17:25:18 | INFO | src.analysis.profiling | Analyzing missing values
+17:25:18 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/global_profiling.csv
+17:25:18 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/mean_median_profiling.csv
+17:25:18 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/tail_profiling.csv
+17:25:18 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/extreme_profiling.csv
+17:25:18 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/log_profiling.csv
+17:25:18 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/city_profiling.csv
+17:25:18 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/missing_profiling.csv
+17:25:18 | INFO | src.analysis.profiling | Profiling completed
+17:25:18 | INFO | src.pipelines.eda_pipeline | Analysis steps executed: profiling
+17:25:18 | INFO | src.pipelines.eda_pipeline | EDA pipeline completed
+17:25:29 | INFO | src.utils.logger | Logger initialized (file + Rich console)
+17:25:34 | INFO | src.prediction.loader | Loaded 29040 city rows (scanned 842160 raw rows) from chunks
+17:25:34 | INFO | src.preprocessing.validation | Validating schema
+17:25:34 | INFO | src.preprocessing.validation | Schema validation passed
+17:25:34 | INFO | src.preprocessing.validation | Validating data ranges
+17:25:34 | INFO | src.preprocessing.validation | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+17:25:34 | INFO | src.preprocessing.validation | Checking duplicate records
+17:25:34 | INFO | src.preprocessing.validation | Duplicate rows: 0
+17:25:34 | INFO | src.preprocessing.cleaning | Starting data cleaning
+17:25:34 | INFO | src.preprocessing.cleaning | Removed duplicates: 0
+17:25:34 | INFO | src.preprocessing.cleaning | Final dataset shape: (29040, 8)
+17:25:34 | INFO | src.preprocessing.cleaning | Rows removed: 0
+17:25:34 | INFO | src.preprocessing.feature_engineering | Starting feature engineering
+17:25:34 | INFO | src.preprocessing.feature_engineering | Adding time-based features
+17:25:34 | INFO | src.preprocessing.feature_engineering | Adding lag features
+17:25:34 | INFO | src.preprocessing.feature_engineering | Adding rolling features
+17:25:34 | INFO | src.preprocessing.feature_engineering | Calculating deviation from baseline
+17:25:34 | INFO | src.preprocessing.feature_engineering | Adding severity categories
+17:25:34 | INFO | src.preprocessing.feature_engineering | Adding weather interaction flags
+17:25:34 | INFO | src.preprocessing.feature_engineering | Adding event flags
+17:25:34 | INFO | src.preprocessing.feature_engineering | Feature engineering completed
+17:25:38 | INFO | src.analysis.forecasting | Horizon 1h | train 20159 / test 8711 | test R²=0.8390 | test MAE=12.073 | test RMSE=17.258
+17:41:57 | INFO | src.utils.logger | Logger initialized (file + Rich console)
+17:42:02 | INFO | src.prediction.loader | Loaded 29040 city rows (scanned 842160 raw rows) from chunks
+17:42:02 | INFO | src.preprocessing.validation | Validating schema
+17:42:02 | INFO | src.preprocessing.validation | Schema validation passed
+17:42:02 | INFO | src.preprocessing.validation | Validating data ranges
+17:42:02 | INFO | src.preprocessing.validation | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+17:42:02 | INFO | src.preprocessing.validation | Checking duplicate records
+17:42:02 | INFO | src.preprocessing.validation | Duplicate rows: 0
+17:42:02 | INFO | src.preprocessing.cleaning | Starting data cleaning
+17:42:02 | INFO | src.preprocessing.cleaning | Removed duplicates: 0
+17:42:02 | INFO | src.preprocessing.cleaning | Final dataset shape: (29040, 8)
+17:42:02 | INFO | src.preprocessing.cleaning | Rows removed: 0
+17:42:02 | INFO | src.preprocessing.feature_engineering | Starting feature engineering
+17:42:02 | INFO | src.preprocessing.feature_engineering | Adding time-based features
+17:42:02 | INFO | src.preprocessing.feature_engineering | Adding lag features
+17:42:02 | INFO | src.preprocessing.feature_engineering | Adding rolling features
+17:42:02 | INFO | src.preprocessing.feature_engineering | Calculating deviation from baseline
+17:42:02 | INFO | src.preprocessing.feature_engineering | Adding severity categories
+17:42:02 | INFO | src.preprocessing.feature_engineering | Adding weather interaction flags
+17:42:02 | INFO | src.preprocessing.feature_engineering | Adding event flags
+17:42:02 | INFO | src.preprocessing.feature_engineering | Feature engineering completed
+17:42:05 | INFO | src.analysis.forecasting | Horizon 1h | train 20159 / test 8711 | test R²=0.8390 | test MAE=12.073 | test RMSE=17.258
+18:17:35 | INFO | src.utils.logger | Logger initialized (file + Rich console)
+18:17:39 | INFO | src.prediction.loader | Loaded 29040 city rows (scanned 842160 raw rows) from chunks
+18:17:39 | INFO | src.preprocessing.validation | Validating schema
+18:17:39 | INFO | src.preprocessing.validation | Schema validation passed
+18:17:39 | INFO | src.preprocessing.validation | Validating data ranges
+18:17:39 | INFO | src.preprocessing.validation | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+18:17:39 | INFO | src.preprocessing.validation | Checking duplicate records
+18:17:40 | INFO | src.preprocessing.validation | Duplicate rows: 0
+18:17:40 | INFO | src.preprocessing.cleaning | Starting data cleaning
+18:17:40 | INFO | src.preprocessing.cleaning | Removed duplicates: 0
+18:17:40 | INFO | src.preprocessing.cleaning | Final dataset shape: (29040, 8)
+18:17:40 | INFO | src.preprocessing.cleaning | Rows removed: 0
+18:17:40 | INFO | src.preprocessing.feature_engineering | Starting feature engineering
+18:17:40 | INFO | src.preprocessing.feature_engineering | Adding time-based features
+18:17:40 | INFO | src.preprocessing.feature_engineering | Adding lag features
+18:17:40 | INFO | src.preprocessing.feature_engineering | Adding rolling features
+18:17:40 | INFO | src.preprocessing.feature_engineering | Calculating deviation from baseline
+18:17:40 | INFO | src.preprocessing.feature_engineering | Adding severity categories
+18:17:40 | INFO | src.preprocessing.feature_engineering | Adding weather interaction flags
+18:17:40 | INFO | src.preprocessing.feature_engineering | Adding event flags
+18:17:40 | INFO | src.preprocessing.feature_engineering | Feature engineering completed
+18:17:43 | INFO | src.analysis.forecasting | Horizon 1h | train 20159 / test 8711 | test R²=0.8390 | test MAE=12.073 | test RMSE=17.258

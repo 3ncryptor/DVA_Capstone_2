@@ -1,3 +1,10 @@
+"""
+Prediction CLI path: load one city in chunks, validate, clean, engineer features,
+then ``run_forecast`` (per-horizon RF, time-ordered split, metrics, joblib + manifest).
+
+Does not run EDA profiling/temporal blocks; use ``cli.py --stage`` for those.
+"""
+
 import json
 import logging
 import os

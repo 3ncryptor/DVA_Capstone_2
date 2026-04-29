@@ -1,3 +1,11 @@
+"""
+EDA orchestration: shared preprocessing then stage-gated analysis.
+
+Order: ``load_data`` → ``validate_*`` → ``clean_data`` → ``create_features``,
+then profiling / temporal / interactions / events+extremes / synthesis / visual
+depending on ``stage`` (see ``EDA_STAGE_CHOICES`` in ``src.utils.helpers``).
+"""
+
 from src.ingestion.loader import load_data
 from src.preprocessing.validation import (
     validate_schema,

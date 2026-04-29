@@ -1,14 +1,19 @@
 import logging
+import os
+
 import pandas as pd
+
+from src.utils.helpers import outputs_path
 
 logger = logging.getLogger(__name__)
 
-# Baseline vs Event Analysis
+
 def compute_baseline(df: pd.DataFrame) -> pd.DataFrame:
-    """Add rolling baseline and event_delta to *df* in place (same object callers hold)."""
+    """Add 24h rolling baseline and event_delta columns."""
     logger.info("Computing rolling baseline")
 
-    df.sort_values(["City", "Datetime"], inplace=True)
+    df = df.copy()
+    df = df.sort_values(["City", "Datetime"])
 
     df["baseline_pm25"] = df.groupby("City")["PM2_5_ugm3"].transform(
         lambda x: x.rolling(24).mean()
@@ -18,51 +23,51 @@ def compute_baseline(df: pd.DataFrame) -> pd.DataFrame:
 
     return df
 
-# Festival Impact Analysis
-def festival_impact(df: pd.DataFrame):
 
+def festival_impact(df: pd.DataFrame) -> pd.DataFrame:
+    """Mean PM2.5 and event_delta grouped by festival flag."""
     logger.info("Analyzing festival impact")
 
-    result = df.groupby("is_festival").agg({
-        "PM2_5_ugm3": "mean",
-        "event_delta": "mean"
-    }).reset_index()
+    result = (
+        df.groupby("is_festival")
+        .agg({"PM2_5_ugm3": "mean", "event_delta": "mean"})
+        .reset_index()
+    )
 
     return result
 
-# Crop Burning Impact Analysis
-def crop_burning_impact(df: pd.DataFrame):
 
+def crop_burning_impact(df: pd.DataFrame) -> pd.DataFrame:
+    """Mean PM2.5 and event_delta by Season × crop-burning flag."""
     logger.info("Analyzing crop burning impact")
 
-    result = df.groupby(["Season", "is_crop_burning"]).agg({
-        "PM2_5_ugm3": "mean",
-        "event_delta": "mean"
-    }).reset_index()
+    result = (
+        df.groupby(["Season", "is_crop_burning"])
+        .agg({"PM2_5_ugm3": "mean", "event_delta": "mean"})
+        .reset_index()
+    )
 
     return result
 
-# Event Amplification Factor
-def amplification_factor(df: pd.DataFrame):
 
+def amplification_factor(df: pd.DataFrame) -> pd.DataFrame:
+    """Delta amplification during festival vs non-festival periods."""
     logger.info("Calculating event amplification factor")
 
-    event = df[df["is_festival"] == True]["event_delta"].mean()
-    non_event = df[df["is_festival"] == False]["event_delta"].mean()
+    event = df[df["is_festival"]]["event_delta"].mean()
+    non_event = df[~df["is_festival"]]["event_delta"].mean()
 
     result = {
         "event_delta": event,
         "non_event_delta": non_event,
-        "amplification": event - non_event
+        "amplification": event - non_event,
     }
 
     return pd.DataFrame([result])
 
 
-
-# Event Frequency vs Severity Analysis
-def event_severity(df: pd.DataFrame):
-
+def event_severity(df: pd.DataFrame) -> pd.DataFrame:
+    """Severe-pollution probability during festival vs non-festival periods."""
     logger.info("Analyzing severity during events")
 
     result = df.groupby("is_festival")["is_severe"].mean().reset_index()
@@ -70,24 +75,26 @@ def event_severity(df: pd.DataFrame):
 
     return result
 
-# MasterFunction
-def event_analysis(df: pd.DataFrame):
 
+def event_analysis(df: pd.DataFrame) -> dict[str, pd.DataFrame]:
+    """Run all event sub-analyses and persist CSVs."""
     logger.info("Starting event analysis")
 
     df = compute_baseline(df)
 
-    outputs = {}
+    outputs: dict[str, pd.DataFrame] = {}
 
     outputs["festival"] = festival_impact(df)
     outputs["crop"] = crop_burning_impact(df)
     outputs["amplification"] = amplification_factor(df)
     outputs["severity"] = event_severity(df)
 
+    tables_dir = outputs_path("tables")
+    os.makedirs(tables_dir, exist_ok=True)
     for name, table in outputs.items():
-        path = f"outputs/tables/{name}_events.csv"
+        path = os.path.join(tables_dir, f"{name}_events.csv")
         table.to_csv(path, index=False)
-        logger.info(f"Saved: {path}")
+        logger.info("Saved: %s", path)
 
     logger.info("Event analysis completed")
 

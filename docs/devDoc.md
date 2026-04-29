@@ -1,6 +1,6 @@
 # Air quality analysis system — production design document
 
-This document describes the **analytical goals** and the **as-built architecture** of the repository. For install and run commands, see the main [README.md](../README.md).
+This document describes the **analytical goals** and the **as-built architecture** of the repository. For install and run commands, see the main [README.md](../README.md). New contributors can run **`./setup.sh`** from the repo root after clone (venv, dependencies, **pytest**, optional prediction smoke). Contributor workflow: [CONTRIBUTING.md](../CONTRIBUTING.md); tests: [testing.md](testing.md).
 
 ---
 
@@ -93,47 +93,66 @@ Path resolution is anchored to the **repository root** (`project_root()` in `src
 <repo root>/
   cli.py
   README.md
+  CONTRIBUTING.md
   requirements.txt
-  LICENSE.md
+  setup.sh
+  LICENSE
+  tests/                   # pytest suite (synthetic fixtures); see docs/testing.md
+  notebooks/               # pipeline.ipynb — narrated walkthrough for instructors
+  scripts/                 # run_eda.sh, run_predict.sh shell wrappers
+  reports/                 # human deliverables (PDF/Markdown)
+  tableau/                 # dashboard_links.md for published workbook URLs
+  DVA-focused-Portfolio/   # course deliverable (not used by code)
+  DVA-oriented-Resume/     # resume materials (not used by code)
   docs/
     devDoc.md
+    tableauDoc.md
+    testing.md
+    configuration.md
+    Tableau/               # screenshot PNGs
   config/
-    config.yaml          # e.g. data.raw_path, analysis.default_stage
-    logging.yaml         # file handler; Rich console added in code
+    config.yaml            # e.g. data.raw_path, analysis.default_stage
+    logging.yaml           # file handler; Rich console added in code
   data/
-    raw/                 # user-supplied CSV; large files gitignored, .gitkeep keeps folder
+    raw/                   # user-supplied CSV; tracked for instructor review when committed
   src/
+    __init__.py
     ingestion/
-      loader.py          # full-file load for EDA; paths via config
+      __init__.py
+      loader.py            # full-file load for EDA; paths via config
     preprocessing/
+      __init__.py
       cleaning.py
       feature_engineering.py
       validation.py
     analysis/
+      __init__.py
       profiling.py
       temporal.py
       interactions.py
       events.py
       extremes.py
-      visualization.py   # matplotlib / seaborn figures (stages: visual, full)
-      synthesis.py        # Tableau-style dashboard tables (full)
-      forecasting.py     # time split, per-horizon RF, metrics, joblib, manifest
+      visualization.py     # matplotlib / seaborn figures (stages: visual, full)
+      synthesis.py          # Tableau-style dashboard tables (full)
+      forecasting.py       # time split, per-horizon RF, metrics, joblib, manifest
     pipelines/
-      eda_pipeline.py    # run_eda: preprocess + gated analysis stages
+      __init__.py
+      eda_pipeline.py      # run_eda: preprocess + gated analysis stages
     prediction/
       __init__.py
-      loader.py          # chunked read + usecols + city filter
-      pipeline.py        # predict orchestration, Rich progress and panels
+      loader.py            # chunked read + usecols + city filter
+      pipeline.py          # predict orchestration, Rich progress and panels
     utils/
-      helpers.py         # project_root, EDA stage registry
-      logger.py          # file + RichHandler on stdout
-      cli_screens.py     # EDA welcome / start / success / error panels
+      __init__.py
+      helpers.py           # project_root, EDA stage registry
+      logger.py            # file + RichHandler on stdout
+      cli_screens.py       # EDA welcome / start / success / error panels
   outputs/
-    tables/              # analysis CSVs (suffixes _profiling, _temporal, etc.)
-    plots/                # from visualization
+    tables/                # analysis CSVs (suffixes _profiling, _temporal, etc.)
+      Tableau/             # *_dashboard.csv when --stage full
+    plots/                 # from visualization
     logs/
       app.log
-    Tables/Tableau/       # *_dashboard.csv when --stage full
     prediction/
       last_run.json
       models/<City>/<run_id>/
@@ -208,7 +227,7 @@ The following layers map to **code modules** and **CLI stages**; not every layer
 ### Layer 6 — Presentation and handoff
 
 **Modules:** `visualization.py`, `synthesis.py`  
-**Stages:** `visual` (plots) and `full` (adds **Tableau**-oriented `*_dashboard.csv` under `outputs/Tables/Tableau/` and visualization)
+**Stages:** `visual` (plots) and `full` (adds **Tableau**-oriented `*_dashboard.csv` under `outputs/tables/Tableau/` and visualization)
 
 ### Layer 7 — Forecasting (prediction execution layer, not an EDA `--stage`)
 
@@ -337,11 +356,11 @@ python cli.py --help
 | --- | --- | --- |
 | EDA tables | `outputs/tables/` | `*_profiling.csv`, `*_temporal.csv`, `*_interaction.csv`, `*_events.csv`, `*_extremes.csv` |
 | Plots | `outputs/plots/` | PNGs from `visualization.py` when `visual` or `full` |
-| Dashboards | `outputs/Tables/Tableau/` | `*_dashboard.csv` when `full` (paths as logged) |
+| Dashboards | `outputs/tables/Tableau/` | `*_dashboard.csv` when `full` |
 | Logs | `outputs/logs/app.log` | Full session log (text) |
 | Prediction | `outputs/prediction/` | `last_run.json`; `models/<City>/<timestamp>/manifest.json` and `rf_h*h.joblib` |
 
-**Git / GitHub:** Large raw CSVs and generated `outputs/` are **gitignored** in this repo; see [README.md](../README.md) and `.gitignore`.
+**Git / GitHub:** Raw CSVs under `data/raw/` and generated `outputs/` are **tracked** (not ignored) so instructors can review them; see [README.md](../README.md) and `.gitignore`. Use Git LFS if files exceed host limits.
 
 ---
 
@@ -363,12 +382,12 @@ Short-horizon model metrics are **per horizon and per city**; they depend on the
 
 ## 11. Roadmap and maintenance (post–v1)
 
-The core pipeline, CLI, EDA stages, **synthesis**, **visualization**, and **prediction** path are in place. Reasonable next steps (project-specific) include:
+The core pipeline, CLI, EDA stages, **synthesis**, **visualization**, and **prediction** path are in place. A **pytest** suite lives under `tests/` (see [testing.md](testing.md)); `./setup.sh` runs it after install. Reasonable next steps (project-specific) include:
 
 * Adding or tuning **`spatial` analysis** (new module) if gridded or geo fields become first-class
 * **External validation** of forecast models (other cities, other years, regime shifts)
-* **Tests** under `tests/` and CI
+* **CI** (e.g. GitHub Actions) invoking `pytest` on push/pull request
 * **Config-driven** forecast horizons and model IDs without code edits
 * Tighter integration between **synthesis** outputs and a **Tableau** workbook path documented for stakeholders
 
-For commands and file-level detail, the **source of truth** remains [README.md](../README.md) and the code under `src/`.
+For commands and file-level detail, the **source of truth** remains [README.md](../README.md), [docs/README.md](README.md), and the code under `src/`.

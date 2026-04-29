@@ -1,0 +1,6 @@
+Season,is_festival,is_crop_burning,PM2_5_ugm3
+Monsoon,False,False,21.772487500339665
+Post_Monsoon,False,True,39.27718082922824
+Post_Monsoon,True,True,41.81418148347701
+Summer,False,False,33.85852802765284
+Winter,False,False,50.66048691521398

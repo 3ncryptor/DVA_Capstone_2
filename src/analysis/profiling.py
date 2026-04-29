@@ -1,11 +1,16 @@
 import logging
+import os
+
 import numpy as np
 import pandas as pd
 
+from src.utils.helpers import outputs_path
+
 logger = logging.getLogger(__name__)
 
-def global_distribution(df: pd.DataFrame):
 
+def global_distribution(df: pd.DataFrame) -> pd.DataFrame:
+    """Global PM2.5 distribution stats (mean, median, percentiles)."""
     logger.info("Running global distribution profiling")
 
     pm = df["PM2_5_ugm3"].dropna()
@@ -19,16 +24,16 @@ def global_distribution(df: pd.DataFrame):
         "min": pm.min(),
         "max": pm.max(),
         "p95": np.percentile(pm, 95),
-        "p99": np.percentile(pm, 99)
+        "p99": np.percentile(pm, 99),
     }
 
-    logger.info(f"Global stats: {stats}")
+    logger.info("Global stats: %s", stats)
 
     return pd.DataFrame([stats])
 
 
-def mean_median_gap(df: pd.DataFrame):
-
+def mean_median_gap(df: pd.DataFrame) -> pd.DataFrame:
+    """Mean-median divergence as a skewness indicator."""
     logger.info("Calculating mean-median divergence")
 
     mean_val = df["PM2_5_ugm3"].mean()
@@ -40,15 +45,16 @@ def mean_median_gap(df: pd.DataFrame):
         "mean": mean_val,
         "median": median_val,
         "gap": gap,
-        "gap_ratio": gap / mean_val if mean_val != 0 else 0
+        "gap_ratio": gap / mean_val if mean_val != 0 else 0,
     }
 
-    logger.info(f"Mean-Median Gap: {result}")
+    logger.info("Mean-Median Gap: %s", result)
 
     return pd.DataFrame([result])
 
-def tail_risk(df: pd.DataFrame):
 
+def tail_risk(df: pd.DataFrame) -> pd.DataFrame:
+    """Fraction of records above the 250 µg/m³ severe threshold."""
     logger.info("Analyzing tail risk")
 
     pm = df["PM2_5_ugm3"]
@@ -61,16 +67,16 @@ def tail_risk(df: pd.DataFrame):
     result = {
         "total_records": total,
         "severe_count": severe_count,
-        "severe_percentage": severe_count / total
+        "severe_percentage": severe_count / total,
     }
 
-    logger.info(f"Tail risk stats: {result}")
+    logger.info("Tail risk stats: %s", result)
 
     return pd.DataFrame([result])
 
 
-def extreme_contribution(df: pd.DataFrame):
-
+def extreme_contribution(df: pd.DataFrame) -> pd.DataFrame:
+    """Share of total PM2.5 mass contributed by >p95 values."""
     logger.info("Calculating contribution of extreme values")
 
     pm = df["PM2_5_ugm3"]
@@ -83,16 +89,16 @@ def extreme_contribution(df: pd.DataFrame):
 
     result = {
         "p95_threshold": threshold,
-        "extreme_contribution_ratio": contribution
+        "extreme_contribution_ratio": contribution,
     }
 
-    logger.info(f"Extreme contribution: {result}")
+    logger.info("Extreme contribution: %s", result)
 
     return pd.DataFrame([result])
 
 
-def log_distribution(df: pd.DataFrame):
-
+def log_distribution(df: pd.DataFrame) -> pd.DataFrame:
+    """Log-transformed PM2.5 summary (mean, std, skew)."""
     logger.info("Applying log transformation")
 
     pm = df["PM2_5_ugm3"]
@@ -102,50 +108,49 @@ def log_distribution(df: pd.DataFrame):
     stats = {
         "log_mean": log_pm.mean(),
         "log_std": log_pm.std(),
-        "log_skew": pd.Series(log_pm).skew()
+        "log_skew": pd.Series(log_pm).skew(),
     }
 
-    logger.info(f"Log distribution stats: {stats}")
+    logger.info("Log distribution stats: %s", stats)
 
     return pd.DataFrame([stats])
 
-def city_distribution(df: pd.DataFrame):
 
+def city_distribution(df: pd.DataFrame) -> pd.DataFrame:
+    """Per-city PM2.5 descriptive statistics with coefficient of variation."""
     logger.info("Profiling distribution per city")
 
-    city_stats = df.groupby("City")["PM2_5_ugm3"].agg([
-        "mean",
-        "median",
-        "std",
-        "max"
-    ])
+    city_stats = df.groupby("City")["PM2_5_ugm3"].agg(
+        ["mean", "median", "std", "max"]
+    )
 
     city_stats["cv"] = city_stats["std"] / city_stats["mean"]
 
     return city_stats.reset_index()
 
 
-def missingness(df: pd.DataFrame):
-
+def missingness(df: pd.DataFrame) -> pd.DataFrame:
+    """Per-column missing-value counts and ratios."""
     logger.info("Analyzing missing values")
 
     missing = df.isnull().sum()
 
     missing_ratio = missing / len(df)
 
-    result = pd.DataFrame({
-        "missing_count": missing,
-        "missing_ratio": missing_ratio
-    })
+    result = pd.DataFrame(
+        {"missing_count": missing, "missing_ratio": missing_ratio}
+    )
+
+    result = result.reset_index().rename(columns={"index": "column"})
 
     return result.sort_values(by="missing_ratio", ascending=False)
 
 
-def run_profiling(df: pd.DataFrame):
-
+def run_profiling(df: pd.DataFrame) -> dict[str, pd.DataFrame]:
+    """Run all profiling sub-analyses and persist CSVs."""
     logger.info("Starting profiling analysis")
 
-    outputs = {}
+    outputs: dict[str, pd.DataFrame] = {}
 
     outputs["global"] = global_distribution(df)
     outputs["mean_median"] = mean_median_gap(df)
@@ -155,11 +160,12 @@ def run_profiling(df: pd.DataFrame):
     outputs["city"] = city_distribution(df)
     outputs["missing"] = missingness(df)
 
-    # Save outputs
+    tables_dir = outputs_path("tables")
+    os.makedirs(tables_dir, exist_ok=True)
     for name, table in outputs.items():
-        path = f"outputs/tables/{name}_profiling.csv"
+        path = os.path.join(tables_dir, f"{name}_profiling.csv")
         table.to_csv(path, index=False)
-        logger.info(f"Saved: {path}")
+        logger.info("Saved: %s", path)
 
     logger.info("Profiling completed")
 

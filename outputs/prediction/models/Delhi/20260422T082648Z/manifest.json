@@ -1,0 +1,128 @@
+{
+  "city": "Delhi",
+  "run_id": "20260422T082648Z",
+  "horizons": [
+    1,
+    6,
+    12,
+    24,
+    48
+  ],
+  "split": {
+    "method": "time_index",
+    "test_fraction": 0.2,
+    "n_rows_city": 29040,
+    "cut_index": 23232
+  },
+  "features": [
+    "pm25_lag_1",
+    "pm25_lag_24",
+    "pm25_lag_168",
+    "pm25_roll_24",
+    "Wind_Speed_10m_kmh",
+    "Humidity_Percent",
+    "Temp_2m_C"
+  ],
+  "per_horizon": {
+    "1": {
+      "horizon_hours": 1,
+      "n_train": 23063,
+      "n_test": 5807,
+      "train_metrics": {
+        "mae": 3.6538504097472146,
+        "rmse": 5.596265626226604,
+        "mse": 31.318188959285443,
+        "r2": 0.9845881534936116,
+        "mape": 6.42180946678156
+      },
+      "test_metrics": {
+        "mae": 10.349773376958844,
+        "rmse": 14.387718783856625,
+        "mse": 207.00645180334078,
+        "r2": 0.8318315177134031,
+        "mape": 16.582184049531428
+      },
+      "model_path": "outputs/prediction/models/Delhi/20260422T082648Z/rf_h1h.joblib"
+    },
+    "6": {
+      "horizon_hours": 6,
+      "n_train": 23058,
+      "n_test": 5802,
+      "train_metrics": {
+        "mae": 5.411993884985688,
+        "rmse": 8.249615305042731,
+        "mse": 68.05615268119526,
+        "r2": 0.9665141498179403,
+        "mape": 10.494375471296179
+      },
+      "test_metrics": {
+        "mae": 19.862470527404344,
+        "rmse": 26.786258135605156,
+        "mse": 717.5036249072733,
+        "r2": 0.41684915996362937,
+        "mape": 33.177502931118006
+      },
+      "model_path": "outputs/prediction/models/Delhi/20260422T082648Z/rf_h6h.joblib"
+    },
+    "12": {
+      "horizon_hours": 12,
+      "n_train": 23052,
+      "n_test": 5796,
+      "train_metrics": {
+        "mae": 5.72501301405518,
+        "rmse": 8.584293604637049,
+        "mse": 73.69009669061252,
+        "r2": 0.9637413552663369,
+        "mape": 11.382277327194819
+      },
+      "test_metrics": {
+        "mae": 20.888310559006207,
+        "rmse": 27.885401657121957,
+        "mse": 777.5956255790201,
+        "r2": 0.36844615058239205,
+        "mape": 36.05348902926497
+      },
+      "model_path": "outputs/prediction/models/Delhi/20260422T082648Z/rf_h12h.joblib"
+    },
+    "24": {
+      "horizon_hours": 24,
+      "n_train": 23040,
+      "n_test": 5784,
+      "train_metrics": {
+        "mae": 5.617785069444445,
+        "rmse": 8.317374319754594,
+        "mse": 69.1787155749132,
+        "r2": 0.9659619684875304,
+        "mape": 12.779676937562254
+      },
+      "test_metrics": {
+        "mae": 17.812633298755184,
+        "rmse": 24.70120349670258,
+        "mse": 610.1494541855117,
+        "r2": 0.5041245328126764,
+        "mape": 29.13801859995767
+      },
+      "model_path": "outputs/prediction/models/Delhi/20260422T082648Z/rf_h24h.joblib"
+    },
+    "48": {
+      "horizon_hours": 48,
+      "n_train": 23016,
+      "n_test": 5760,
+      "train_metrics": {
+        "mae": 6.103070342370525,
+        "rmse": 8.898429281000631,
+        "mse": 79.18204366896941,
+        "r2": 0.9610504074101942,
+        "mape": 17.567069531995156
+      },
+      "test_metrics": {
+        "mae": 20.614783854166667,
+        "rmse": 27.95128744791565,
+        "mse": 781.274469996007,
+        "r2": 0.366741104603175,
+        "mape": 33.427590984613126
+      },
+      "model_path": "outputs/prediction/models/Delhi/20260422T082648Z/rf_h48h.joblib"
+    }
+  }
+}

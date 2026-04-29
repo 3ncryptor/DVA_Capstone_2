@@ -1,35 +1,37 @@
 import logging
+import os
+
 import pandas as pd
+
+from src.utils.helpers import outputs_path
 
 logger = logging.getLogger(__name__)
 
-# Extract Extreme Pollution Events
-def extract_extremes(df: pd.DataFrame):
 
+def extract_extremes(df: pd.DataFrame) -> pd.DataFrame:
+    """Filter rows where PM2.5 exceeds the 250 µg/m³ severe threshold."""
     logger.info("Extracting extreme pollution events")
 
     extreme = df[df["PM2_5_ugm3"] > 250]
 
     return extreme
 
-# Extreme Conditions Analysis
-def extreme_conditions(df: pd.DataFrame):
 
+def extreme_conditions(df: pd.DataFrame) -> pd.DataFrame:
+    """Descriptive stats of weather variables during extreme events."""
     logger.info("Analyzing conditions during extreme events")
 
     extreme = extract_extremes(df)
 
-    summary = extreme[[
-        "Wind_Speed_10m_kmh",
-        "Humidity_Percent",
-        "Temp_2m_C"
-    ]].describe()
+    summary = extreme[
+        ["Wind_Speed_10m_kmh", "Humidity_Percent", "Temp_2m_C"]
+    ].describe()
 
     return summary
 
-# Extreme Event Distribution Analysis
-def extreme_distribution(df: pd.DataFrame):
 
+def extreme_distribution(df: pd.DataFrame) -> pd.DataFrame:
+    """Count of extreme events by City × Season."""
     logger.info("Analyzing extreme event distribution")
 
     extreme = extract_extremes(df)
@@ -38,9 +40,9 @@ def extreme_distribution(df: pd.DataFrame):
 
     return result
 
-# Extreme Probability Analysis
-def extreme_probability(df: pd.DataFrame):
 
+def extreme_probability(df: pd.DataFrame) -> pd.DataFrame:
+    """Conditional probability of severe events by weather/season group."""
     logger.info("Computing probability of extreme events")
 
     grouped = df.groupby(["low_wind", "high_humidity", "Season"])
@@ -51,21 +53,23 @@ def extreme_probability(df: pd.DataFrame):
 
     return prob
 
-# MasterFunction
-def extreme_analysis(df: pd.DataFrame):
 
+def extreme_analysis(df: pd.DataFrame) -> dict[str, pd.DataFrame]:
+    """Run all extreme-event sub-analyses and persist CSVs."""
     logger.info("Starting extreme event analysis")
 
-    outputs = {}
+    outputs: dict[str, pd.DataFrame] = {}
 
     outputs["conditions"] = extreme_conditions(df)
     outputs["distribution"] = extreme_distribution(df)
     outputs["probability"] = extreme_probability(df)
 
+    tables_dir = outputs_path("tables")
+    os.makedirs(tables_dir, exist_ok=True)
     for name, table in outputs.items():
-        path = f"outputs/tables/{name}_extremes.csv"
+        path = os.path.join(tables_dir, f"{name}_extremes.csv")
         table.to_csv(path, index=False)
-        logger.info(f"Saved: {path}")
+        logger.info("Saved: %s", path)
 
     logger.info("Extreme analysis completed")
 

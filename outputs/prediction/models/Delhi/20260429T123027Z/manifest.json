@@ -1,0 +1,44 @@
+{
+  "city": "Delhi",
+  "run_id": "20260429T123027Z",
+  "horizons": [
+    1
+  ],
+  "split": {
+    "method": "time_index",
+    "test_fraction": 0.3,
+    "n_rows_city": 100,
+    "cut_index": 70
+  },
+  "features": [
+    "pm25_lag_1",
+    "pm25_lag_24",
+    "pm25_lag_168",
+    "pm25_roll_24",
+    "Wind_Speed_10m_kmh",
+    "Humidity_Percent",
+    "Temp_2m_C"
+  ],
+  "per_horizon": {
+    "1": {
+      "horizon_hours": 1,
+      "n_train": 69,
+      "n_test": 29,
+      "train_metrics": {
+        "mae": 12.620880327552085,
+        "rmse": 17.171610698682066,
+        "mse": 294.86421398709234,
+        "r2": 0.8551091315600864,
+        "mape": 18.667295937337673
+      },
+      "test_metrics": {
+        "mae": 47.45761772383479,
+        "rmse": 53.543935065373915,
+        "mse": 2866.9529822849786,
+        "r2": -0.12591654186174162,
+        "mape": 56.807198696462926
+      },
+      "model_path": "outputs/prediction/models/Delhi/20260429T123027Z/rf_h1h.joblib"
+    }
+  }
+}
