@@ -1,0 +1,61 @@
+{
+  "index": {
+    "kind": "resume",
+    "source_folder": "DVA-oriented-Resume",
+    "schema_version": 1
+  },
+  "entries": [
+    {
+      "id": "aryan",
+      "name": "Aryan",
+      "link": "https://drive.google.com/drive/folders/1rAL8XxEBaPrtPeqV5H-N1kkmiC6yOC-T?usp=drive_link",
+      "source_file": "aryan.md"
+    },
+    {
+      "id": "mohan",
+      "name": "Mohan",
+      "link": "https://drive.google.com/file/d/1YpqlLJdr82xPLu99GXkvYsxvUahuigsc/view?usp=sharing",
+      "source_file": "Mohan.md"
+    },
+    {
+      "id": "rohit",
+      "name": "Rohit",
+      "link": "https://drive.google.com/file/d/1YvE4G-ZEDOkxzEgFN3qNXy0KGf0VR2-T/view?usp=sharing",
+      "source_file": "Rohit.md"
+    },
+    {
+      "id": "vani",
+      "name": "Vani",
+      "link": "https://drive.google.com/drive/folders/1g4Mg_U9dpfuRmDF9PI9HzeeF9uZNxlND?usp=drive_link",
+      "source_file": "Vani.md"
+    },
+    {
+      "id": "yashi",
+      "name": "Yashi",
+      "link": "https://drive.google.com/file/d/1vagLJgSuRNPn4otM_hZ5zLAre1mFrgo9/view?usp=sharing",
+      "source_file": "yashi.md"
+    }
+  ],
+  "by_id": {
+    "aryan": {
+      "name": "Aryan",
+      "link": "https://drive.google.com/drive/folders/1rAL8XxEBaPrtPeqV5H-N1kkmiC6yOC-T?usp=drive_link"
+    },
+    "mohan": {
+      "name": "Mohan",
+      "link": "https://drive.google.com/file/d/1YpqlLJdr82xPLu99GXkvYsxvUahuigsc/view?usp=sharing"
+    },
+    "rohit": {
+      "name": "Rohit",
+      "link": "https://drive.google.com/file/d/1YvE4G-ZEDOkxzEgFN3qNXy0KGf0VR2-T/view?usp=sharing"
+    },
+    "vani": {
+      "name": "Vani",
+      "link": "https://drive.google.com/drive/folders/1g4Mg_U9dpfuRmDF9PI9HzeeF9uZNxlND?usp=drive_link"
+    },
+    "yashi": {
+      "name": "Yashi",
+      "link": "https://drive.google.com/file/d/1vagLJgSuRNPn4otM_hZ5zLAre1mFrgo9/view?usp=sharing"
+    }
+  }
+}

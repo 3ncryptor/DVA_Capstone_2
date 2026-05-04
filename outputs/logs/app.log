@@ -1478,3 +1478,77 @@ INFO | Execution completed (stage=predict)
 18:17:40 | INFO | src.preprocessing.feature_engineering | Adding event flags
 18:17:40 | INFO | src.preprocessing.feature_engineering | Feature engineering completed
 18:17:43 | INFO | src.analysis.forecasting | Horizon 1h | train 20159 / test 8711 | test R²=0.8390 | test MAE=12.073 | test RMSE=17.258
+00:24:58 | INFO | src.utils.logger | Logger initialized (file + Rich console)
+00:24:58 | INFO | src.pipelines.eda_pipeline | Starting EDA pipeline (analysis stage=profiling)
+00:24:58 | INFO | src.pipelines.eda_pipeline | Shared preprocessing always runs: load → validate → clean → feature engineering
+00:24:58 | INFO | src.ingestion.loader | Loading data from data/raw/INDIA_AQI_COMPLETE_20251126.csv
+00:25:00 | INFO | src.ingestion.loader | Data loaded successfully | Shape: (842160, 71)
+00:25:00 | INFO | src.ingestion.loader | Datetime parsing successful
+00:25:00 | INFO | src.preprocessing.validation | Validating schema
+00:25:00 | INFO | src.preprocessing.validation | Schema validation passed
+00:25:00 | INFO | src.preprocessing.validation | Validating data ranges
+00:25:00 | INFO | src.preprocessing.validation | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+00:25:00 | INFO | src.preprocessing.validation | Checking duplicate records
+00:25:01 | INFO | src.preprocessing.validation | Duplicate rows: 0
+00:25:01 | INFO | src.preprocessing.cleaning | Starting data cleaning
+00:25:02 | INFO | src.preprocessing.cleaning | Removed duplicates: 0
+00:25:02 | INFO | src.preprocessing.cleaning | Final dataset shape: (842160, 71)
+00:25:02 | INFO | src.preprocessing.cleaning | Rows removed: 0
+00:25:02 | INFO | src.preprocessing.feature_engineering | Starting feature engineering
+00:25:02 | INFO | src.preprocessing.feature_engineering | Adding time-based features
+00:25:02 | INFO | src.preprocessing.feature_engineering | Adding lag features
+00:25:02 | INFO | src.preprocessing.feature_engineering | Adding rolling features
+00:25:02 | INFO | src.preprocessing.feature_engineering | Calculating deviation from baseline
+00:25:02 | INFO | src.preprocessing.feature_engineering | Adding severity categories
+00:25:03 | INFO | src.preprocessing.feature_engineering | Adding weather interaction flags
+00:25:03 | INFO | src.preprocessing.feature_engineering | Adding event flags
+00:25:03 | INFO | src.preprocessing.feature_engineering | Feature engineering completed
+00:25:03 | INFO | src.analysis.profiling | Starting profiling analysis
+00:25:03 | INFO | src.analysis.profiling | Running global distribution profiling
+00:25:03 | INFO | src.analysis.profiling | Global stats: {'mean': np.float64(34.73964246698964), 'median': np.float64(25.9), 'std': np.float64(30.84349611479471), 'skewness': np.float64(2.5428533421546824), 'kurtosis': np.float64(10.50788591117613), 'min': np.float64(0.1), 'max': np.float64(581.1), 'p95': np.float64(93.8), 'p99': np.float64(155.1)}
+00:25:03 | INFO | src.analysis.profiling | Calculating mean-median divergence
+00:25:03 | INFO | src.analysis.profiling | Mean-Median Gap: {'mean': np.float64(34.73964246698964), 'median': np.float64(25.9), 'gap': np.float64(8.839642466989645), 'gap_ratio': np.float64(0.25445404268018196)}
+00:25:03 | INFO | src.analysis.profiling | Analyzing tail risk
+00:25:03 | INFO | src.analysis.profiling | Tail risk stats: {'total_records': 842160, 'severe_count': np.int64(740), 'severe_percentage': np.float64(0.0008786928849624775)}
+00:25:03 | INFO | src.analysis.profiling | Calculating contribution of extreme values
+00:25:03 | INFO | src.analysis.profiling | Extreme contribution: {'p95_threshold': np.float64(93.8), 'extreme_contribution_ratio': np.float64(0.18846409389735877)}
+00:25:03 | INFO | src.analysis.profiling | Applying log transformation
+00:25:03 | INFO | src.analysis.profiling | Log distribution stats: {'log_mean': np.float64(3.2743357270434386), 'log_std': np.float64(0.7924186122899202), 'log_skew': np.float64(-0.1594869975577457)}
+00:25:03 | INFO | src.analysis.profiling | Profiling distribution per city
+00:25:03 | INFO | src.analysis.profiling | Analyzing missing values
+00:25:03 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/global_profiling.csv
+00:25:03 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/mean_median_profiling.csv
+00:25:03 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/tail_profiling.csv
+00:25:03 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/extreme_profiling.csv
+00:25:03 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/log_profiling.csv
+00:25:03 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/city_profiling.csv
+00:25:03 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/missing_profiling.csv
+00:25:03 | INFO | src.analysis.profiling | Profiling completed
+00:25:03 | INFO | src.pipelines.eda_pipeline | Analysis steps executed: profiling
+00:25:03 | INFO | src.pipelines.eda_pipeline | EDA pipeline completed
+00:25:29 | INFO | src.utils.logger | Logger initialized (file + Rich console)
+00:25:32 | INFO | src.prediction.loader | Loaded 29040 city rows (scanned 842160 raw rows) from chunks
+00:25:32 | INFO | src.preprocessing.validation | Validating schema
+00:25:32 | INFO | src.preprocessing.validation | Schema validation passed
+00:25:32 | INFO | src.preprocessing.validation | Validating data ranges
+00:25:32 | INFO | src.preprocessing.validation | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+00:25:32 | INFO | src.preprocessing.validation | Checking duplicate records
+00:25:32 | INFO | src.preprocessing.validation | Duplicate rows: 0
+00:25:32 | INFO | src.preprocessing.cleaning | Starting data cleaning
+00:25:32 | INFO | src.preprocessing.cleaning | Removed duplicates: 0
+00:25:32 | INFO | src.preprocessing.cleaning | Final dataset shape: (29040, 8)
+00:25:32 | INFO | src.preprocessing.cleaning | Rows removed: 0
+00:25:32 | INFO | src.preprocessing.feature_engineering | Starting feature engineering
+00:25:32 | INFO | src.preprocessing.feature_engineering | Adding time-based features
+00:25:32 | INFO | src.preprocessing.feature_engineering | Adding lag features
+00:25:32 | INFO | src.preprocessing.feature_engineering | Adding rolling features
+00:25:32 | INFO | src.preprocessing.feature_engineering | Calculating deviation from baseline
+00:25:32 | INFO | src.preprocessing.feature_engineering | Adding severity categories
+00:25:32 | INFO | src.preprocessing.feature_engineering | Adding weather interaction flags
+00:25:32 | INFO | src.preprocessing.feature_engineering | Adding event flags
+00:25:32 | INFO | src.preprocessing.feature_engineering | Feature engineering completed
+00:25:33 | INFO | src.analysis.forecasting | Horizon 1h | train 23063 / test 5807 | test R²=0.8318 | test MAE=10.350 | test RMSE=14.388
+00:25:35 | INFO | src.analysis.forecasting | Horizon 6h | train 23058 / test 5802 | test R²=0.4168 | test MAE=19.862 | test RMSE=26.786
+00:25:38 | INFO | src.analysis.forecasting | Horizon 12h | train 23052 / test 5796 | test R²=0.3684 | test MAE=20.888 | test RMSE=27.885
+00:25:40 | INFO | src.analysis.forecasting | Horizon 24h | train 23040 / test 5784 | test R²=0.5041 | test MAE=17.813 | test RMSE=24.701
+00:25:41 | INFO | src.analysis.forecasting | Horizon 48h | train 23016 / test 5760 | test R²=0.3667 | test MAE=20.615 | test RMSE=27.951

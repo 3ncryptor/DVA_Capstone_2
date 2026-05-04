@@ -1,0 +1,61 @@
+{
+  "index": {
+    "kind": "portfolio",
+    "source_folder": "DVA-focused-Portfolio",
+    "schema_version": 1
+  },
+  "entries": [
+    {
+      "id": "aryan",
+      "name": "Aryan",
+      "link": "https://personal-portfolio-dva.vercel.app/",
+      "source_file": "aryan.md"
+    },
+    {
+      "id": "rohit",
+      "name": "Rohit",
+      "link": "https://dva-portfolio-rho.vercel.app/",
+      "source_file": "Rohit.md"
+    },
+    {
+      "id": "satya",
+      "name": "Satya",
+      "link": "https://satya-yadav-dva-portfolio.vercel.app/",
+      "source_file": "Satya.md"
+    },
+    {
+      "id": "vani",
+      "name": "Vani",
+      "link": "https://vanosaur.github.io/DVA_Resume_and_Portfolio/",
+      "source_file": "Vani.md"
+    },
+    {
+      "id": "yashi",
+      "name": "Yashi",
+      "link": "https://dva-portfolio-lvmxc6lrm-yashi-agarwals-projects.vercel.app/",
+      "source_file": "yashi.md"
+    }
+  ],
+  "by_id": {
+    "aryan": {
+      "name": "Aryan",
+      "link": "https://personal-portfolio-dva.vercel.app/"
+    },
+    "rohit": {
+      "name": "Rohit",
+      "link": "https://dva-portfolio-rho.vercel.app/"
+    },
+    "satya": {
+      "name": "Satya",
+      "link": "https://satya-yadav-dva-portfolio.vercel.app/"
+    },
+    "vani": {
+      "name": "Vani",
+      "link": "https://vanosaur.github.io/DVA_Resume_and_Portfolio/"
+    },
+    "yashi": {
+      "name": "Yashi",
+      "link": "https://dva-portfolio-lvmxc6lrm-yashi-agarwals-projects.vercel.app/"
+    }
+  }
+}

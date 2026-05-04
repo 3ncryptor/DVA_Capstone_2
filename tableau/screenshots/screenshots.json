@@ -1,0 +1,83 @@
+{
+  "index": {
+    "kind": "tableau_screenshot",
+    "source_folder": "tableau/screenshots",
+    "schema_version": 1
+  },
+  "entries": [
+    {
+      "id": "dashboard-1",
+      "label": "Dashboard 1",
+      "dashboard_number": 1,
+      "file": "Dashboard 1.png",
+      "path": "tableau/screenshots/Dashboard 1.png"
+    },
+    {
+      "id": "dashboard-2",
+      "label": "Dashboard 2",
+      "dashboard_number": 2,
+      "file": "Dashboard 2.png",
+      "path": "tableau/screenshots/Dashboard 2.png"
+    },
+    {
+      "id": "dashboard-3",
+      "label": "Dashboard 3",
+      "dashboard_number": 3,
+      "file": "Dashboard-3.png",
+      "path": "tableau/screenshots/Dashboard-3.png"
+    },
+    {
+      "id": "dashboard-4",
+      "label": "Dashboard 4",
+      "dashboard_number": 4,
+      "file": "Dashboard 4.png",
+      "path": "tableau/screenshots/Dashboard 4.png"
+    },
+    {
+      "id": "dashboard-5",
+      "label": "Dashboard 5",
+      "dashboard_number": 5,
+      "file": "Dashboard 5.png",
+      "path": "tableau/screenshots/Dashboard 5.png"
+    },
+    {
+      "id": "dashboard-6",
+      "label": "Dashboard 6",
+      "dashboard_number": 6,
+      "file": "Dashboard 6.png",
+      "path": "tableau/screenshots/Dashboard 6.png"
+    }
+  ],
+  "by_id": {
+    "dashboard-1": {
+      "label": "Dashboard 1",
+      "file": "Dashboard 1.png",
+      "path": "tableau/screenshots/Dashboard 1.png"
+    },
+    "dashboard-2": {
+      "label": "Dashboard 2",
+      "file": "Dashboard 2.png",
+      "path": "tableau/screenshots/Dashboard 2.png"
+    },
+    "dashboard-3": {
+      "label": "Dashboard 3",
+      "file": "Dashboard-3.png",
+      "path": "tableau/screenshots/Dashboard-3.png"
+    },
+    "dashboard-4": {
+      "label": "Dashboard 4",
+      "file": "Dashboard 4.png",
+      "path": "tableau/screenshots/Dashboard 4.png"
+    },
+    "dashboard-5": {
+      "label": "Dashboard 5",
+      "file": "Dashboard 5.png",
+      "path": "tableau/screenshots/Dashboard 5.png"
+    },
+    "dashboard-6": {
+      "label": "Dashboard 6",
+      "file": "Dashboard 6.png",
+      "path": "tableau/screenshots/Dashboard 6.png"
+    }
+  }
+}
