@@ -1552,3 +1552,284 @@ INFO | Execution completed (stage=predict)
 00:25:38 | INFO | src.analysis.forecasting | Horizon 12h | train 23052 / test 5796 | test R²=0.3684 | test MAE=20.888 | test RMSE=27.885
 00:25:40 | INFO | src.analysis.forecasting | Horizon 24h | train 23040 / test 5784 | test R²=0.5041 | test MAE=17.813 | test RMSE=24.701
 00:25:41 | INFO | src.analysis.forecasting | Horizon 48h | train 23016 / test 5760 | test R²=0.3667 | test MAE=20.615 | test RMSE=27.951
+13:17:13 | INFO | src.utils.logger | Logger initialized (file + Rich console)
+13:17:17 | INFO | src.prediction.loader | Loaded 29040 city rows (scanned 842160 raw rows) from chunks
+13:17:17 | INFO | src.preprocessing.validation | Validating schema
+13:17:17 | INFO | src.preprocessing.validation | Schema validation passed
+13:17:17 | INFO | src.preprocessing.validation | Validating data ranges
+13:17:17 | INFO | src.preprocessing.validation | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+13:17:17 | INFO | src.preprocessing.validation | Checking duplicate records
+13:17:17 | INFO | src.preprocessing.validation | Duplicate rows: 0
+13:17:17 | INFO | src.preprocessing.cleaning | Starting data cleaning
+13:17:17 | INFO | src.preprocessing.cleaning | Removed duplicates: 0
+13:17:17 | INFO | src.preprocessing.cleaning | Final dataset shape: (29040, 8)
+13:17:17 | INFO | src.preprocessing.cleaning | Rows removed: 0
+13:17:17 | INFO | src.preprocessing.feature_engineering | Starting feature engineering
+13:17:17 | INFO | src.preprocessing.feature_engineering | Adding time-based features
+13:17:17 | INFO | src.preprocessing.feature_engineering | Adding lag features
+13:17:17 | INFO | src.preprocessing.feature_engineering | Adding rolling features
+13:17:17 | INFO | src.preprocessing.feature_engineering | Calculating deviation from baseline
+13:17:17 | INFO | src.preprocessing.feature_engineering | Adding severity categories
+13:17:17 | INFO | src.preprocessing.feature_engineering | Adding weather interaction flags
+13:17:17 | INFO | src.preprocessing.feature_engineering | Adding event flags
+13:17:17 | INFO | src.preprocessing.feature_engineering | Feature engineering completed
+13:17:20 | INFO | src.analysis.forecasting | Horizon 1h | train 20159 / test 8711 | test R²=0.8390 | test MAE=12.073 | test RMSE=17.258
+13:18:07 | INFO | src.utils.logger | Logger initialized (file + Rich console)
+13:18:07 | INFO | src.pipelines.eda_pipeline | Starting EDA pipeline (analysis stage=full)
+13:18:07 | INFO | src.pipelines.eda_pipeline | Shared preprocessing always runs: load → validate → clean → feature engineering
+13:18:07 | INFO | src.ingestion.loader | Loading data from data/raw/INDIA_AQI_COMPLETE_20251126.csv
+13:18:10 | INFO | src.ingestion.loader | Data loaded successfully | Shape: (842160, 71)
+13:18:10 | INFO | src.ingestion.loader | Datetime parsing successful
+13:18:10 | INFO | src.preprocessing.validation | Validating schema
+13:18:10 | INFO | src.preprocessing.validation | Schema validation passed
+13:18:10 | INFO | src.preprocessing.validation | Validating data ranges
+13:18:10 | INFO | src.preprocessing.validation | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+13:18:10 | INFO | src.preprocessing.validation | Checking duplicate records
+13:18:12 | INFO | src.preprocessing.validation | Duplicate rows: 0
+13:18:12 | INFO | src.preprocessing.cleaning | Starting data cleaning
+13:18:13 | INFO | src.preprocessing.cleaning | Removed duplicates: 0
+13:18:13 | INFO | src.preprocessing.cleaning | Final dataset shape: (842160, 71)
+13:18:13 | INFO | src.preprocessing.cleaning | Rows removed: 0
+13:18:13 | INFO | src.preprocessing.feature_engineering | Starting feature engineering
+13:18:13 | INFO | src.preprocessing.feature_engineering | Adding time-based features
+13:18:13 | INFO | src.preprocessing.feature_engineering | Adding lag features
+13:18:13 | INFO | src.preprocessing.feature_engineering | Adding rolling features
+13:18:14 | INFO | src.preprocessing.feature_engineering | Calculating deviation from baseline
+13:18:14 | INFO | src.preprocessing.feature_engineering | Adding severity categories
+13:18:14 | INFO | src.preprocessing.feature_engineering | Adding weather interaction flags
+13:18:14 | INFO | src.preprocessing.feature_engineering | Adding event flags
+13:18:14 | INFO | src.preprocessing.feature_engineering | Feature engineering completed
+13:18:14 | INFO | src.analysis.profiling | Starting profiling analysis
+13:18:14 | INFO | src.analysis.profiling | Running global distribution profiling
+13:18:14 | INFO | src.analysis.profiling | Global stats: {'mean': np.float64(34.73964246698964), 'median': np.float64(25.9), 'std': np.float64(30.84349611479471), 'skewness': np.float64(2.5428533421546824), 'kurtosis': np.float64(10.50788591117613), 'min': np.float64(0.1), 'max': np.float64(581.1), 'p95': np.float64(93.8), 'p99': np.float64(155.1)}
+13:18:14 | INFO | src.analysis.profiling | Calculating mean-median divergence
+13:18:14 | INFO | src.analysis.profiling | Mean-Median Gap: {'mean': np.float64(34.73964246698964), 'median': np.float64(25.9), 'gap': np.float64(8.839642466989645), 'gap_ratio': np.float64(0.25445404268018196)}
+13:18:14 | INFO | src.analysis.profiling | Analyzing tail risk
+13:18:14 | INFO | src.analysis.profiling | Tail risk stats: {'total_records': 842160, 'severe_count': np.int64(740), 'severe_percentage': np.float64(0.0008786928849624775)}
+13:18:14 | INFO | src.analysis.profiling | Calculating contribution of extreme values
+13:18:14 | INFO | src.analysis.profiling | Extreme contribution: {'p95_threshold': np.float64(93.8), 'extreme_contribution_ratio': np.float64(0.18846409389735877)}
+13:18:14 | INFO | src.analysis.profiling | Applying log transformation
+13:18:14 | INFO | src.analysis.profiling | Log distribution stats: {'log_mean': np.float64(3.2743357270434386), 'log_std': np.float64(0.7924186122899202), 'log_skew': np.float64(-0.1594869975577457)}
+13:18:14 | INFO | src.analysis.profiling | Profiling distribution per city
+13:18:14 | INFO | src.analysis.profiling | Analyzing missing values
+13:18:14 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/global_profiling.csv
+13:18:14 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/mean_median_profiling.csv
+13:18:14 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/tail_profiling.csv
+13:18:14 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/extreme_profiling.csv
+13:18:14 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/log_profiling.csv
+13:18:14 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/city_profiling.csv
+13:18:14 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/missing_profiling.csv
+13:18:14 | INFO | src.analysis.profiling | Profiling completed
+13:18:14 | INFO | src.analysis.temporal | Starting temporal analysis
+13:18:15 | INFO | src.analysis.temporal | Aggregating data to daily and monthly levels
+13:18:16 | INFO | src.analysis.temporal | Computing rolling trend and volatility
+13:18:17 | INFO | src.analysis.temporal | Analyzing diurnal (hourly) patterns
+13:18:17 | INFO | src.analysis.temporal | Analyzing seasonal trends
+13:18:17 | INFO | src.analysis.temporal | Computing lag correlation
+13:18:17 | INFO | src.analysis.temporal | Detecting volatility regimes
+13:18:18 | INFO | src.analysis.temporal | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/daily_temporal.csv
+13:18:18 | INFO | src.analysis.temporal | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/monthly_temporal.csv
+13:18:18 | INFO | src.analysis.temporal | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/diurnal_temporal.csv
+13:18:18 | INFO | src.analysis.temporal | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/seasonal_temporal.csv
+13:18:18 | INFO | src.analysis.temporal | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/lag_temporal.csv
+13:18:20 | INFO | src.analysis.temporal | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/volatility_temporal.csv
+13:18:20 | INFO | src.analysis.temporal | Temporal analysis completed
+13:18:20 | INFO | src.analysis.interactions | Starting interaction analysis
+13:18:20 | INFO | src.analysis.interactions | Analyzing Wind × Season interaction
+13:18:20 | INFO | src.analysis.interactions | Analyzing Humidity × Season interaction
+13:18:20 | INFO | src.analysis.interactions | Analyzing Wind × Humidity interaction
+13:18:20 | INFO | src.analysis.interactions | Analyzing Event × Season interaction
+13:18:20 | INFO | src.analysis.interactions | Computing conditional probability of severe pollution
+13:18:20 | INFO | src.analysis.interactions | Evaluating interaction strength
+13:18:20 | INFO | src.analysis.interactions | Analyzing city-level interaction effects
+13:18:20 | INFO | src.analysis.interactions | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/wind_season_interaction.csv
+13:18:20 | INFO | src.analysis.interactions | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/humidity_season_interaction.csv
+13:18:20 | INFO | src.analysis.interactions | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/wind_humidity_interaction.csv
+13:18:20 | INFO | src.analysis.interactions | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/event_season_interaction.csv
+13:18:20 | INFO | src.analysis.interactions | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/severe_prob_interaction.csv
+13:18:20 | INFO | src.analysis.interactions | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/strength_interaction.csv
+13:18:20 | INFO | src.analysis.interactions | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/city_interaction_interaction.csv
+13:18:20 | INFO | src.analysis.interactions | Interaction analysis completed
+13:18:20 | INFO | src.analysis.events | Starting event analysis
+13:18:20 | INFO | src.analysis.events | Computing rolling baseline
+13:18:22 | INFO | src.analysis.events | Analyzing festival impact
+13:18:22 | INFO | src.analysis.events | Analyzing crop burning impact
+13:18:22 | INFO | src.analysis.events | Calculating event amplification factor
+13:18:22 | INFO | src.analysis.events | Analyzing severity during events
+13:18:22 | INFO | src.analysis.events | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/festival_events.csv
+13:18:22 | INFO | src.analysis.events | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/crop_events.csv
+13:18:22 | INFO | src.analysis.events | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/amplification_events.csv
+13:18:22 | INFO | src.analysis.events | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/severity_events.csv
+13:18:22 | INFO | src.analysis.events | Event analysis completed
+13:18:22 | INFO | src.analysis.extremes | Starting extreme event analysis
+13:18:22 | INFO | src.analysis.extremes | Analyzing conditions during extreme events
+13:18:22 | INFO | src.analysis.extremes | Extracting extreme pollution events
+13:18:22 | INFO | src.analysis.extremes | Analyzing extreme event distribution
+13:18:22 | INFO | src.analysis.extremes | Extracting extreme pollution events
+13:18:22 | INFO | src.analysis.extremes | Computing probability of extreme events
+13:18:22 | INFO | src.analysis.extremes | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/conditions_extremes.csv
+13:18:22 | INFO | src.analysis.extremes | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/distribution_extremes.csv
+13:18:22 | INFO | src.analysis.extremes | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/probability_extremes.csv
+13:18:22 | INFO | src.analysis.extremes | Extreme analysis completed
+13:18:22 | INFO | src.analysis.synthesis | Building all Tableau datasets
+13:18:23 | INFO | src.analysis.synthesis | Building overview dataset
+13:18:23 | INFO | src.analysis.synthesis | Building temporal dataset
+13:18:24 | INFO | src.analysis.synthesis | Building city comparison dataset
+13:18:24 | INFO | src.analysis.synthesis | Building interaction dataset
+13:18:24 | INFO | src.analysis.synthesis | Building event dataset
+13:18:24 | ERROR | __main__ | Pipeline failed during EDA run
+Traceback (most recent call last):
+  File "/Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/cli.py", line 139, in main
+    run_eda(stage)
+    ~~~~~~~^^^^^^^
+  File "/Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/src/pipelines/eda_pipeline.py", line 77, in run_eda
+    build_all_datasets(df)
+    ~~~~~~~~~~~~~~~~~~^^^^
+  File "/Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/src/analysis/synthesis.py", line 131, in build_all_datasets
+    "events": build_events(df),
+              ~~~~~~~~~~~~^^^^
+  File "/Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/src/analysis/synthesis.py", line 91, in build_events
+    .agg({"PM2_5_ugm3": "mean", "event_delta": "mean", "is_severe": "mean"})
+     ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/.venv/lib/python3.14/site-packages/pandas/core/groupby/generic.py", line 2291, in aggregate
+    result = op.agg()
+  File "/Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/.venv/lib/python3.14/site-packages/pandas/core/apply.py", line 294, in agg
+    return self.agg_dict_like()
+           ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/.venv/lib/python3.14/site-packages/pandas/core/apply.py", line 511, in agg_dict_like
+    return self.agg_or_apply_dict_like(op_name="agg")
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/.venv/lib/python3.14/site-packages/pandas/core/apply.py", line 1677, in agg_or_apply_dict_like
+    result_index, result_data = self.compute_dict_like(
+                                ~~~~~~~~~~~~~~~~~~~~~~^
+        op_name, selected_obj, selection, kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/.venv/lib/python3.14/site-packages/pandas/core/apply.py", line 550, in compute_dict_like
+    func = self.normalize_dictlike_arg(op_name, selected_obj, func)
+  File "/Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/.venv/lib/python3.14/site-packages/pandas/core/apply.py", line 762, in normalize_dictlike_arg
+    raise KeyError(f"Label(s) {list(cols)} do not exist")
+KeyError: "Label(s) ['event_delta'] do not exist"
+13:22:23 | INFO | src.utils.logger | Logger initialized (file + Rich console)
+13:22:23 | INFO | src.pipelines.eda_pipeline | Starting EDA pipeline (analysis stage=full)
+13:22:23 | INFO | src.pipelines.eda_pipeline | Shared preprocessing always runs: load → validate → clean → feature engineering
+13:22:23 | INFO | src.ingestion.loader | Loading data from data/raw/INDIA_AQI_COMPLETE_20251126.csv
+13:22:27 | INFO | src.ingestion.loader | Data loaded successfully | Shape: (842160, 71)
+13:22:27 | INFO | src.ingestion.loader | Datetime parsing successful
+13:22:27 | INFO | src.preprocessing.validation | Validating schema
+13:22:27 | INFO | src.preprocessing.validation | Schema validation passed
+13:22:27 | INFO | src.preprocessing.validation | Validating data ranges
+13:22:27 | INFO | src.preprocessing.validation | Validation issues summary: {'negative_pm25': 0, 'invalid_humidity': 0, 'negative_wind': 0}
+13:22:27 | INFO | src.preprocessing.validation | Checking duplicate records
+13:22:28 | INFO | src.preprocessing.validation | Duplicate rows: 0
+13:22:28 | INFO | src.preprocessing.cleaning | Starting data cleaning
+13:22:30 | INFO | src.preprocessing.cleaning | Removed duplicates: 0
+13:22:30 | INFO | src.preprocessing.cleaning | Final dataset shape: (842160, 71)
+13:22:30 | INFO | src.preprocessing.cleaning | Rows removed: 0
+13:22:30 | INFO | src.preprocessing.feature_engineering | Starting feature engineering
+13:22:30 | INFO | src.preprocessing.feature_engineering | Adding time-based features
+13:22:30 | INFO | src.preprocessing.feature_engineering | Adding lag features
+13:22:30 | INFO | src.preprocessing.feature_engineering | Adding rolling features
+13:22:30 | INFO | src.preprocessing.feature_engineering | Calculating deviation from baseline
+13:22:30 | INFO | src.preprocessing.feature_engineering | Adding severity categories
+13:22:30 | INFO | src.preprocessing.feature_engineering | Adding weather interaction flags
+13:22:30 | INFO | src.preprocessing.feature_engineering | Adding event flags
+13:22:30 | INFO | src.preprocessing.feature_engineering | Feature engineering completed
+13:22:30 | INFO | src.analysis.profiling | Starting profiling analysis
+13:22:30 | INFO | src.analysis.profiling | Running global distribution profiling
+13:22:30 | INFO | src.analysis.profiling | Global stats: {'mean': np.float64(34.73964246698964), 'median': np.float64(25.9), 'std': np.float64(30.84349611479471), 'skewness': np.float64(2.5428533421546824), 'kurtosis': np.float64(10.50788591117613), 'min': np.float64(0.1), 'max': np.float64(581.1), 'p95': np.float64(93.8), 'p99': np.float64(155.1)}
+13:22:30 | INFO | src.analysis.profiling | Calculating mean-median divergence
+13:22:30 | INFO | src.analysis.profiling | Mean-Median Gap: {'mean': np.float64(34.73964246698964), 'median': np.float64(25.9), 'gap': np.float64(8.839642466989645), 'gap_ratio': np.float64(0.25445404268018196)}
+13:22:30 | INFO | src.analysis.profiling | Analyzing tail risk
+13:22:30 | INFO | src.analysis.profiling | Tail risk stats: {'total_records': 842160, 'severe_count': np.int64(740), 'severe_percentage': np.float64(0.0008786928849624775)}
+13:22:30 | INFO | src.analysis.profiling | Calculating contribution of extreme values
+13:22:30 | INFO | src.analysis.profiling | Extreme contribution: {'p95_threshold': np.float64(93.8), 'extreme_contribution_ratio': np.float64(0.18846409389735877)}
+13:22:30 | INFO | src.analysis.profiling | Applying log transformation
+13:22:30 | INFO | src.analysis.profiling | Log distribution stats: {'log_mean': np.float64(3.2743357270434386), 'log_std': np.float64(0.7924186122899202), 'log_skew': np.float64(-0.1594869975577457)}
+13:22:30 | INFO | src.analysis.profiling | Profiling distribution per city
+13:22:30 | INFO | src.analysis.profiling | Analyzing missing values
+13:22:31 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/global_profiling.csv
+13:22:31 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/mean_median_profiling.csv
+13:22:31 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/tail_profiling.csv
+13:22:31 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/extreme_profiling.csv
+13:22:31 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/log_profiling.csv
+13:22:31 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/city_profiling.csv
+13:22:31 | INFO | src.analysis.profiling | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/missing_profiling.csv
+13:22:31 | INFO | src.analysis.profiling | Profiling completed
+13:22:31 | INFO | src.analysis.temporal | Starting temporal analysis
+13:22:32 | INFO | src.analysis.temporal | Aggregating data to daily and monthly levels
+13:22:33 | INFO | src.analysis.temporal | Computing rolling trend and volatility
+13:22:34 | INFO | src.analysis.temporal | Analyzing diurnal (hourly) patterns
+13:22:34 | INFO | src.analysis.temporal | Analyzing seasonal trends
+13:22:34 | INFO | src.analysis.temporal | Computing lag correlation
+13:22:34 | INFO | src.analysis.temporal | Detecting volatility regimes
+13:22:35 | INFO | src.analysis.temporal | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/daily_temporal.csv
+13:22:35 | INFO | src.analysis.temporal | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/monthly_temporal.csv
+13:22:35 | INFO | src.analysis.temporal | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/diurnal_temporal.csv
+13:22:35 | INFO | src.analysis.temporal | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/seasonal_temporal.csv
+13:22:35 | INFO | src.analysis.temporal | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/lag_temporal.csv
+13:22:37 | INFO | src.analysis.temporal | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/volatility_temporal.csv
+13:22:37 | INFO | src.analysis.temporal | Temporal analysis completed
+13:22:37 | INFO | src.analysis.interactions | Starting interaction analysis
+13:22:37 | INFO | src.analysis.interactions | Analyzing Wind × Season interaction
+13:22:37 | INFO | src.analysis.interactions | Analyzing Humidity × Season interaction
+13:22:37 | INFO | src.analysis.interactions | Analyzing Wind × Humidity interaction
+13:22:37 | INFO | src.analysis.interactions | Analyzing Event × Season interaction
+13:22:37 | INFO | src.analysis.interactions | Computing conditional probability of severe pollution
+13:22:37 | INFO | src.analysis.interactions | Evaluating interaction strength
+13:22:37 | INFO | src.analysis.interactions | Analyzing city-level interaction effects
+13:22:37 | INFO | src.analysis.interactions | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/wind_season_interaction.csv
+13:22:37 | INFO | src.analysis.interactions | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/humidity_season_interaction.csv
+13:22:37 | INFO | src.analysis.interactions | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/wind_humidity_interaction.csv
+13:22:37 | INFO | src.analysis.interactions | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/event_season_interaction.csv
+13:22:37 | INFO | src.analysis.interactions | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/severe_prob_interaction.csv
+13:22:37 | INFO | src.analysis.interactions | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/strength_interaction.csv
+13:22:37 | INFO | src.analysis.interactions | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/city_interaction_interaction.csv
+13:22:37 | INFO | src.analysis.interactions | Interaction analysis completed
+13:22:37 | INFO | src.analysis.events | Starting event analysis
+13:22:37 | INFO | src.analysis.events | Computing rolling baseline
+13:22:39 | INFO | src.analysis.events | Analyzing festival impact
+13:22:39 | INFO | src.analysis.events | Analyzing crop burning impact
+13:22:40 | INFO | src.analysis.events | Calculating event amplification factor
+13:22:41 | INFO | src.analysis.events | Analyzing severity during events
+13:22:41 | INFO | src.analysis.events | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/festival_events.csv
+13:22:41 | INFO | src.analysis.events | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/crop_events.csv
+13:22:41 | INFO | src.analysis.events | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/amplification_events.csv
+13:22:41 | INFO | src.analysis.events | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/severity_events.csv
+13:22:41 | INFO | src.analysis.events | Event analysis completed
+13:22:41 | INFO | src.analysis.extremes | Starting extreme event analysis
+13:22:41 | INFO | src.analysis.extremes | Analyzing conditions during extreme events
+13:22:41 | INFO | src.analysis.extremes | Extracting extreme pollution events
+13:22:41 | INFO | src.analysis.extremes | Analyzing extreme event distribution
+13:22:41 | INFO | src.analysis.extremes | Extracting extreme pollution events
+13:22:41 | INFO | src.analysis.extremes | Computing probability of extreme events
+13:22:41 | INFO | src.analysis.extremes | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/conditions_extremes.csv
+13:22:41 | INFO | src.analysis.extremes | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/distribution_extremes.csv
+13:22:41 | INFO | src.analysis.extremes | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/probability_extremes.csv
+13:22:41 | INFO | src.analysis.extremes | Extreme analysis completed
+13:22:41 | INFO | src.analysis.synthesis | Building all Tableau datasets
+13:22:43 | INFO | src.analysis.synthesis | Building overview dataset
+13:22:43 | INFO | src.analysis.synthesis | Building temporal dataset
+13:22:44 | INFO | src.analysis.synthesis | Building city comparison dataset
+13:22:44 | INFO | src.analysis.synthesis | Building interaction dataset
+13:22:44 | INFO | src.analysis.synthesis | Building event dataset
+13:22:45 | INFO | src.analysis.events | Computing rolling baseline
+13:22:46 | INFO | src.analysis.synthesis | Building extreme dataset
+13:22:46 | INFO | src.analysis.synthesis | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/Tableau/overview_dashboard.csv
+13:22:47 | INFO | src.analysis.synthesis | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/Tableau/temporal_dashboard.csv
+13:22:47 | INFO | src.analysis.synthesis | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/Tableau/city_dashboard.csv
+13:22:47 | INFO | src.analysis.synthesis | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/Tableau/interaction_dashboard.csv
+13:22:47 | INFO | src.analysis.synthesis | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/Tableau/events_dashboard.csv
+13:22:47 | INFO | src.analysis.synthesis | Saved: /Users/aryanvibhuti/Desktop/Projects/DVA_Capston_2/DVA_Capstone_2/outputs/tables/Tableau/extremes_dashboard.csv
+13:22:47 | INFO | src.analysis.synthesis | All datasets ready for Tableau
+13:22:48 | INFO | src.analysis.visualization | Starting visualization module
+13:22:48 | INFO | src.analysis.visualization | Running univariate analysis
+13:22:50 | INFO | src.analysis.visualization | Plotting log distribution
+13:22:51 | INFO | src.analysis.visualization | Plotting wind vs PM2.5
+13:22:52 | INFO | src.analysis.visualization | Plotting humidity vs PM2.5
+13:22:53 | INFO | src.analysis.visualization | Generating correlation heatmap
+13:22:53 | INFO | src.analysis.visualization | Plotting seasonal boxplot
+13:22:54 | INFO | src.analysis.visualization | Visualization completed
+13:22:54 | INFO | src.pipelines.eda_pipeline | Analysis steps executed: profiling, temporal, interactions, events, extremes, visual
+13:22:54 | INFO | src.pipelines.eda_pipeline | EDA pipeline completed

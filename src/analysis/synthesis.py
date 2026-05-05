@@ -82,6 +82,11 @@ def build_events(df: pd.DataFrame) -> pd.DataFrame:
 
     df = df.copy()
 
+    if "event_delta" not in df.columns:
+        from src.analysis.events import compute_baseline
+
+        df = compute_baseline(df)
+
     conditions = [df["is_festival"], df["is_crop_burning"]]
     choices = ["Festival", "Crop Burning"]
     df["event_type"] = np.select(conditions, choices, default="None")
