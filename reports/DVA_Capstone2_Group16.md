@@ -527,7 +527,7 @@ The table below documents each team member's contribution across all project pha
 | Team Member | Dataset & Sourcing | ETL & Cleaning | EDA & Analysis | Statistical Analysis | Tableau Dashboard | Report Writing | PPT & Viva |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Yashi Agarwal** | Yes | — | — | Yes | Yes | — | — |
-| **Vani Rudra** | Yes | — | — | Yes | Yes | — | — |
+| **Vani Rudra** | Yes | — | — | Yes | Yes | Yes | — |
 | **Satya Yadav** | Yes | — | — | Yes | Yes | — | — |
 | **Rohit Kumar** | — | — | Yes | Yes | Yes | — | — |
 | **Mohan Kumar CR** | — | — | Yes | Yes | Yes | — | — |
